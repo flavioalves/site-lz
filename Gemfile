@@ -51,9 +51,9 @@ group :development do
   gem 'rails-boilerplate'
   gem 'magic_encoding'
   gem 'html2slim'
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
-  gem 'rb-fsevent', require: false
+  #gem 'guard-livereload', require: false
+  #gem 'rack-livereload'
+  #gem 'rb-fsevent', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'

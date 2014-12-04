@@ -21,7 +21,7 @@ SiteLZ::Application.configure do
   Slim::Engine.set_default_options format: :html5
   
   # Automatically inject JavaScript needed for LiveReload
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  #config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 
   config.after_initialize do
     Bullet.enable = true

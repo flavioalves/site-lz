@@ -21,12 +21,10 @@ html.no-js lang="#{I18n.locale}"
     /[if lt IE 9]
       == javascript_include_tag 'html5shiv-printshiv'
 
-  body class="#{yield :body_class}" data-development-grid="hide"
+  body class="#{yield :body_class}" data-development-grid="hide"    
     == render 'layouts/header'
     section.page
       == yield
-
-    == render 'layouts/footer'
 
     == javascript_include_tag 'application'
     /[if lt IE 9]

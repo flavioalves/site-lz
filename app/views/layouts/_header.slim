@@ -1,20 +1,29 @@
 header
   .navbar.navbar-inverse.navbar-fixed-top role="navigation"
-    .container
-      .navbar-header
-        button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
-          span.sr-only Toggle navigation
-          span.icon-bar 
-          span.icon-bar 
-          span.icon-bar 
-    
-        a.navbar-brand href="#" Project name
+    .container    
+      a.navbar-brand href="#" LZ Planejamento
 
-      .collapse.navbar-collapse
-        ul class="nav navbar-nav"
-          li.active 
-            a href="#" Home
+      a.navbar-toggle href="#site-menu" 
+        span.sr-only
+        span.icon-bar 
+        span.icon-bar 
+        span.icon-bar 
+
+      nav#site-menu       
+        ul.main-menu
           li 
-            a href="#about" About
+            a href="#{root_path}" home        
           li 
-            a href="#contact" Contact
+            a href="/projetos" projetos
+          li 
+            a href="/escritorio" escritório            
+          li 
+            a href="/midia" mídia
+          li 
+            a href="/clientes" clientes            
+          li 
+            a href="/contato" contato
+
+      a#logo href="#{root_path}" title="LZ Planejamento"
+        //= image_tag 'logo-coda.png', alt: "LZ Planejamento" 
+   
