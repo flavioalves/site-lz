@@ -25,6 +25,7 @@ html.no-js lang="#{I18n.locale}"
     == render 'layouts/header'
     section.page
       == yield
+      == render 'layouts/footer'
 
     == javascript_include_tag 'application'
     /[if lt IE 9]

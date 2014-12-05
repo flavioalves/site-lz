@@ -1,3 +1,76 @@
 .starter-template
   padding: 40px 15px
   text-align: center
+
+.info-content
+  h1.title
+    text-transform: uppercase
+    font-size: 36px
+    margin-bottom: 36px    
+
+  p 
+    margin-bottom: 23px
+    line-height: 25px
+
+  a.default-button
+    color: $text-color
+    text-transform: uppercase
+    border: 1px solid $text-color
+    padding: 24px
+    margin-top: 5px
+    display: inline-block
+    font-size: 14px
+
+    span
+      margin-left: 25px
+
+    &:hover
+      text-decoration: none
+      +transition(0.3s) 
+
+
+.sobre-container
+  height: 600px
+  margin-top: 80px
+  background: url('sobre-cover.png') center right no-repeat  
+
+  .info-content
+    margin-top: 30px
+    float: left
+    width: 350px
+
+.oque-fazemos-container
+  background: #335461  
+  color: #dbdbdb 
+
+  .info-content
+    margin-top: 30px
+    float: right
+    width: 400px
+
+    .content-block  
+      margin-top: 20px
+      display: inline-block
+
+      span.icon-planejamento
+        background: url("planejamento.png") center center no-repeat
+        width: 60px
+        height: 60px
+        float: left
+
+      .content-info        
+        float: left
+        display: block
+        width: 315px
+        margin-left: 20px      
+
+        h2 
+          margin-top: 0px
+          text-transform: uppercase
+          font-size: 18px
+          font-weight: normal
+          color: #f0f0f0
+        p
+      
+
+

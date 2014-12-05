@@ -5,6 +5,7 @@
 // FRAMEWORKS AND PLUGINS
 // --------------------------------------------------
 @import "bootstrap/bootstrap.css"
+@import "font-awesome"
 @import "jquery.mmenu"
 @import "jquery.bxslider"
 // COMPASS
@@ -31,10 +32,30 @@ html
 // --------------------------------------------------
 
 body
+  //font-family: 'Open Sans', sans-serif
   padding-top: 50px
+  color: $text-color
 
   .profiler-results
     display: none
+
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-left: 10px
+  padding-right: 10px
+
+  @media (min-width: $tablets)
+    width: 750px
+    padding-left: 20px
+    padding-right: 20px
+
+  @media (min-width: $default)
+    width: 980px
+
+  @media (min-width: $large-display)
+    //width: 1170px 
+    width: 1000px 
 
 body[data-development-grid="show"]
   .profiler-results
