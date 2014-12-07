@@ -11,6 +11,7 @@
 #= require bootstrap/bootstrap.js
 
 #= require site-menu.js
+#= require slider-home.js
 
 
 

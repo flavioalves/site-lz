@@ -1,6 +1,21 @@
-.starter-template
-  padding: 40px 15px
-  text-align: center
+.slider-container
+  .bx-viewport, .bx-wrapper
+    position: relative
+    top: 0
+    left: 0
+    border: none !important
+
+    .bx-controls .bx-pager    
+      bottom: 20px
+      a.active 
+        background: white
+
+  .bxslider
+    li
+      background-repeat: no-repeat
+      background-position: top center
+      background-size: cover
+
 
 .info-content
   h1.title
@@ -20,9 +35,8 @@
     margin-top: 5px
     display: inline-block
     font-size: 14px
-
-    span
-      margin-left: 25px
+    background: url("arrow-icon.jpg") 85% 50% no-repeat
+    width: 165px
 
     &:hover
       text-decoration: none
@@ -54,6 +68,18 @@
 
       span.icon-planejamento
         background: url("planejamento.png") center center no-repeat
+        width: 60px
+        height: 60px
+        float: left
+
+      span.icon-canteiro
+        background: url("canteiro.png") center center no-repeat
+        width: 60px
+        height: 60px
+        float: left
+
+      span.icon-acompanhamento
+        background: url("acompanhamento.png") center center no-repeat
         width: 60px
         height: 60px
         float: left
