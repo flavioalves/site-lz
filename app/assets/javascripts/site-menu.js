@@ -2,12 +2,9 @@ $(function(){
 
   $("#site-menu").mmenu({
       classes     : 'mm-white',
-      searchfield   : true,
       counters    : true,
-      header      : {
-        add   : true,
-        update  : true,
-        title : 'mmenu'
+      offCanvas : {
+        position: "right"
       }
     },{
       offCanvas: {
