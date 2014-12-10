@@ -1,7 +1,18 @@
 .slider-container
   ul.bxslider
-    li.item = image_tag('slider-1.png')
-    li.item = image_tag('slider-2.png')
+    li.item 
+      = image_tag('slider-1.png')
+      .info 
+        .obra Primeira obra
+        .cliente Cliente A
+        .descricao Donec id elit non mi porta gravida at eget praesent commodo.
+
+    li.item 
+      = image_tag('slider-2.png')
+      .info 
+        .obra Segunda obra
+        .cliente Cliente B
+        .descricao Donec id elit non mi porta gravida at eget praesent commodo.
 
 .sobre-container
   .container
@@ -16,6 +27,7 @@
         span.arrow-icon
 
 .oque-fazemos-container
+  .image-cover
   .container        
     .info-content
 

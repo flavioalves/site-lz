@@ -4,6 +4,7 @@
     top: 0
     left: 0
     border: none !important
+    margin: 0px auto
 
     .bx-controls .bx-pager    
       bottom: 20px
@@ -11,10 +12,27 @@
         background: white
 
   .bxslider
-    li
+    li.item
       background-repeat: no-repeat
       background-position: top center
       background-size: cover
+      .info
+        position: absolute
+        bottom: 75px
+        right: 150px
+        z-index: 10
+        color: white
+        text-align: right
+
+        .obra
+          font-size: 24px
+          text-transform: uppercase
+
+        .cliente
+          font-size: 18px
+        .descricao
+          font-size: 14px
+          width: 300px
 
 
 .info-content
@@ -44,17 +62,19 @@
 
 
 .sobre-container
-  height: 600px
-  margin-top: 80px
-  background: url('sobre-cover.png') center right no-repeat  
+  height: 600px  
+  background: url('sobre-home-cover.png') center right no-repeat  
 
   .info-content
-    margin-top: 30px
+    margin-top: 60px
     float: left
     width: 350px
 
 .oque-fazemos-container
-  background: #335461  
+  
+  background-color: #335461  
+  background: url('oque-fazemos-home-cover.png') center left no-repeat  #335461
+  //opacity: 0.3
   color: #dbdbdb 
 
   .info-content
