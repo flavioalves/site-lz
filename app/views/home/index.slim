@@ -1,18 +1,20 @@
 .slider-container
   ul.bxslider
     li.item 
-      = image_tag('slider-1.png')
-      .info 
-        .obra Primeira obra
-        .cliente Cliente A
-        .descricao Donec id elit non mi porta gravida at eget praesent commodo.
+      = image_tag('slider-1.png', class: 'bg')
+      .container
+        .info 
+          .obra Primeira obra
+          .cliente Cliente A
+          .descricao Donec id elit non mi porta gravida at eget praesent commodo.
 
     li.item 
-      = image_tag('slider-2.png')
-      .info 
-        .obra Segunda obra
-        .cliente Cliente B
-        .descricao Donec id elit non mi porta gravida at eget praesent commodo.
+      = image_tag('slider-2.png', class: 'bg')
+      .container
+        .info 
+          .obra Segunda obra
+          .cliente Cliente B
+          .descricao Donec id elit non mi porta gravida at eget praesent commodo.
 
 .sobre-container
   .container

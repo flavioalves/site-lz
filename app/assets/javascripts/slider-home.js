@@ -6,6 +6,8 @@ $(document).ready(function(){
   $(".slider-container ul.bxslider li.item").height(height);
 
 
-  var slider = $('.bxslider').bxSlider();
+  var slider = $('.bxslider').bxSlider({
+    adaptiveHeight: true
+  });
   slider.startAuto();
 });
