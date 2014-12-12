@@ -9,5 +9,5 @@ $(document).ready(function(){
   var slider = $('.bxslider').bxSlider({
     adaptiveHeight: true
   });
-  slider.startAuto();
+  //slider.startAuto();
 });
