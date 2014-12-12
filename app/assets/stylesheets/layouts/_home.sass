@@ -21,17 +21,20 @@
         top: 0
         left: 0
 
-        @media screen and (max-width: 1024px) 
+        
           left: 50%
           margin-left: -512px   /* 50% */
 
       .info
         position: absolute
         bottom: 75px
-        right: 150px
         z-index: 10
         color: white
         text-align: right
+        right: 20px
+        @media(min-width: $tablets) 
+          right: 150px
+          
 
         .obra
           font-size: 24px
@@ -52,9 +55,11 @@
 .info-content  
 
   h1.title
-    text-transform: uppercase
-    font-size: 36px
+    text-transform: uppercase    
     margin-bottom: 36px    
+    font-size: 30px    
+    @media (min-width: $tablets)
+      font-size: 36px
 
   p 
     margin-bottom: 23px
@@ -84,7 +89,8 @@
   .info-content
     margin-top: 60px
     float: left
-    width: 350px
+    @media (min-width: $tablets)
+      width: 350px
 
 .oque-fazemos-container  
   background-color: #335461  
@@ -93,39 +99,47 @@
 
   .info-content    
     margin-top: 50px
-    margin-bottom: 50px
-    width: 400px
+    margin-bottom: 50px   
     float: left
+
+
     @media (min-width: $tablets)
       float: right
+      width: 400px
 
     .content-block  
       margin-top: 20px
       display: inline-block
 
-      span.icon-planejamento
-        background: url("planejamento.png") center center no-repeat
-        width: 60px
-        height: 60px
-        float: left
+      span 
+        float: left        
+        width: 30px
+        height: 30px
 
-      span.icon-canteiro
-        background: url("canteiro.png") center center no-repeat
-        width: 60px
-        height: 60px
-        float: left
+        @media (min-width: $tablets)
+          width: 60px
+          height: 60px
 
-      span.icon-acompanhamento
-        background: url("acompanhamento.png") center center no-repeat
-        width: 60px
-        height: 60px
-        float: left
+        &.icon-planejamento          
+          background: url("planejamento.png") center center no-repeat
+          background-size: cover 
 
-      .content-info        
+        &.icon-canteiro          
+          background: url("canteiro.png") center center no-repeat
+          background-size: cover 
+
+        &.icon-acompanhamento          
+          background: url("acompanhamento.png") center center no-repeat
+          background-size: cover
+      .info        
         float: left
-        display: block
-        width: 315px
-        margin-left: 20px      
+        display: block        
+        margin-left: 20px  
+        width: 80%        
+
+        @media (min-width: $tablets)                  
+          width: 315px
+          
 
         h2 
           margin-top: 0px

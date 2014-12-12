@@ -13,12 +13,25 @@
       margin-top: 40px
       text-transform: uppercase
 
-    .address, .contacts, .social-links     
-      float: left
-      margin-top: 40px
-      margin-left: 73px
 
-    .social-links     
+    .address, .contacts, .social-links           
+      margin-top: 23px
+      margin-left: 73px
+      float: right
+
+      @media (min-width: $tablets)        
+        margin-top: 40px
+        float: left
+        
+    .social-links
+      @media (min-width: $tablets)
+        float: right
+
+    .social-links  
+      margin-bottom: 35px
+      @media (min-width: $tablets)
+        margin-bottom: 0px
+        
       ul
         +horizontal-list
         li 
