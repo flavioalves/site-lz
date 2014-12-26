@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  layout "pages"
+  
   def show
     render_page_template or
     render_page_content or
@@ -12,6 +14,7 @@ class PagesController < ApplicationController
   end
 
   def render_page_content
+
     @page = Page.find_by_slug params[:slug]
 
     case

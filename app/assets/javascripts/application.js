@@ -8,6 +8,7 @@
 #= require grid.js
 #= require underscore.js
 #= require backbone.js
+#= require headroom.js
 #= require bootstrap/bootstrap.js
 
 #= require site-menu.js

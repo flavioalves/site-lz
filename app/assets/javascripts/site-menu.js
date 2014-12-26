@@ -1,5 +1,15 @@
 $(function(){
 
+
+  // controll header
+  var myHeader = document.querySelector("header");
+  var headroom  = new Headroom(myHeader);
+  headroom.init({
+    offset : 200,
+    tolerance : 200,
+  }); 
+
+
   $("#site-menu").mmenu({
       classes     : 'mm-white',
       counters    : true,

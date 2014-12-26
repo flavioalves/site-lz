@@ -1,9 +1,9 @@
-header
-  .header-container data-spy="affix" data-offset-top="350"
-    .navbar.navbar-inverse.navbar-fixed-top role="navigation" 
+header#header
+  .header-container 
+    .navbar.navbar-inverse role="navigation" 
       .container    
-        a.navbar-brand.logotipo href="#"
-        a.navbar-brand.logo href="#"
+        a.navbar-brand.logotipo href="#{root_path}"
+        a.navbar-brand.logo href="#{root_path}"
 
         a.navbar-toggle.menu href="#site-menu" 
           span.sr-only
@@ -14,18 +14,17 @@ header
         nav#site-menu       
           ul.main-menu
             li 
-              a href="#{root_path}" home        
+              a href="#{root_path}" Home 
             li 
-              a href="/projetos" projetos
+              a href="/empresa" A empresa
             li 
-              a href="/escritorio" escritório            
+              a href="/produtos" Produtos
             li 
-              a href="/midia" mídia
+              a href="/projetos" Projetos
             li 
-              a href="/clientes" clientes            
+              a href="/clientes" Clientes
             li 
-              a href="/contato" contato
+              a href="#{root_path}#contato" Contato
 
         a#logo href="#{root_path}" title="LZ Planejamento"
-          //= image_tag 'logo-coda.png', alt: "LZ Planejamento" 
      
