@@ -1,0 +1,42 @@
+.l-clientes
+
+  .bx-pager-item
+    display: none !important
+
+  .clientes
+    padding: 20px 0px 70px 0px
+
+  .logos  
+    +horizontal-list
+    margin-top: 50px
+
+    li.col-md-5
+      height: 210px
+      padding: 0px
+      margin: 0px
+      border: 1px solid #e5e5e5
+      border-top: none
+
+      &:nth-child(3n)
+        border-right: none        
+        border-left: none  
+
+      &:nth-child(3n + 1)
+        border-left: none  
+        border-right: none 
+
+      &.no-border-bottom
+        border-bottom: none 
+      a 
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        display: block      
+
+        img          
+          display: block
+          margin-left: auto
+          margin-right: auto
+
+
+      
