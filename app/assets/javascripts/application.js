@@ -9,6 +9,7 @@
 #= require underscore.js
 #= require backbone.js
 #= require headroom.js
+#= require masonry.pkgd.min.js
 #= require bootstrap/bootstrap.js
 
 #= require site-menu.js

@@ -1,0 +1,74 @@
+- content_for :body_class, 'l-projetos'
+
+.slider-container
+  ul.bxslider
+    li.item 
+      = image_tag('slider-1.png', class: 'bg')
+      .container
+        .cover-info 
+          .title Projetos LZ<br/>Planejamento
+          .subtitle “Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
+  .nav-down
+
+.projetos
+  .container
+    .row
+      .col-md-9.col-md-offset-6
+        p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum. 
+        h3 Filtro de projetos
+
+        .form-select-projects
+          select.select-clients
+            option CLIENTES
+            option Cliente A
+            option Cliente B
+            option Cliente c
+            option Cliente D        
+
+          select.select-categories
+            option CATEGORIAS
+            option A
+            option B
+            option C
+            option D        
+
+    .row
+      .masonry.js-masonry data-masonry-options='{ "columnWidth": 375, "itemSelector": ".item" }'
+        .item
+          = image_tag('projetos/img-1.png')
+        .item
+          = image_tag('slider-1.png')
+        .item
+          = image_tag('projetos/img-3.png')
+        .item
+          = image_tag('projetos/img-4.png')
+        .item
+          = image_tag('projetos/img-1.png')
+        .item
+          = image_tag('projetos/img-4.png')
+        .item
+          = image_tag('projetos/img-3.png')
+        .item
+          = image_tag('projetos/img-1.png')
+        .item
+          = image_tag('projetos/img-3.png')
+        .item
+          = image_tag('slider-1.png')          
+        .item
+          = image_tag('projetos/img-4.png')
+        .item
+          = image_tag('projetos/img-1.png')
+        .item
+          = image_tag('slider-1.png')
+        .item
+          = image_tag('projetos/img-3.png')
+        .item
+          = image_tag('projetos/img-4.png')
+        .item
+          = image_tag('projetos/img-1.png')
+        .item
+          = image_tag('slider-1.png')
+
+
+
+

@@ -9,5 +9,6 @@ SiteLZ::Application.routes.draw do
   get 'frontend/:template'   => 'frontend#show'
   get 'frontend'             => 'frontend#index'
 
+  get 'projetos'             => 'projects#index'
   get ':slug'                => 'pages#show',     as: :page
 end

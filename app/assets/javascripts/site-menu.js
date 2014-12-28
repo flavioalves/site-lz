@@ -1,6 +1,5 @@
 $(function(){
 
-
   // controll header
   var myHeader = document.querySelector("header");
   var headroom  = new Headroom(myHeader);
