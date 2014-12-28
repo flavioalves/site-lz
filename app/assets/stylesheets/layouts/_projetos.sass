@@ -6,28 +6,30 @@
     select
       float: left
       display: block
-      width: 40%
+      width: 35%
       height: 34px
       padding: 6px 12px
       font-size: 14px
       line-height: 1.42857143
       color: #555555
       background-color: #ffffff
-      background-image: none
-      border: 1px solid #cccccc
-      border-radius: 4px
+      background: url("select-arrow-down.png") no-repeat 95% 50%
+      border: 1px solid #2d2d2d
+      border-radius: 0px
+      -webkit-appearance: none
       -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
       -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
-      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s      
+      text-transform: uppercase
 
       &.select-categories
-        margin-left: 40px
+        margin-left: 20px
+
       &:focus 
-        border-color: #66afe9
+        border-color: #2d2d2d
         outline: 0
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6)
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6)
+        box-shadow: none
   
 
   .masonry.js-masonry
