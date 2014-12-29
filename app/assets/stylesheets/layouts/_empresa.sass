@@ -14,16 +14,24 @@
     margin-top: 50px
     padding-top: 30px
     border-top: 1px solid #d5d5d5
-    ul.produtos-list
-      +horizontal-list
-      margin-top: 20px
 
+    ul.produtos-list
+      list-style: none
+      padding-left: 0px
+      @media (min-width: $tablets) 
+        +horizontal-list
+        margin-top: 20px
+        
       li
         text-transform: uppercase
         background: url('product-icons-black.png') no-repeat
         width: 33%
         line-height: 30px
         padding-left: 35px !important
+
+        margin-bottom: 10px  
+        @media (min-width: $tablets) 
+          margin-bottom: 0px
 
         &.planejamento
           background-position: 0px 1px

@@ -8,14 +8,22 @@
 
   .logos  
     +horizontal-list
-    margin-top: 50px
+    
+    @media (min-width: $large-display)
+      margin-top: 50px
 
     li.col-md-5
-      height: 210px
       padding: 0px
-      margin: 0px
-      border: 1px solid #e5e5e5
-      border-top: none
+      margin: 0px                  
+      border: none
+      height: 110px
+      @media (min-width: $default)         
+        height: 210px
+
+      // put border for tablets
+      @media (min-width: $large-display)         
+        border: 1px solid #e5e5e5
+        border-top: none
 
       &:nth-child(3n)
         border-right: none        
@@ -33,10 +41,18 @@
         transform: translateY(-50%)
         display: block      
 
-        img          
+        img              
           display: block
           margin-left: auto
           margin-right: auto
+          width: 55%  
+
+          @media (min-width: $default) 
+            width: 70%
+
+          @media (min-width: $large-display) 
+            width: auto            
+
 
 
       
