@@ -9,28 +9,35 @@ footer#contato
       margin: 20px 0
       color: #999
 
-    .title
-      float: left
+    .title      
       margin-top: 40px
       text-transform: uppercase
-
+      @media (min-width: $tablets) 
+        float: left
 
     .address, .contacts, .social-links           
-      margin-top: 23px
-      margin-left: 73px
-      float: right
+      margin-top: 23px      
+      
+      @media (min-width: $tablets) 
+        float: right
+        margin-left: 30px       
+        margin-top: 40px        
 
-      @media (min-width: $tablets)        
-        margin-top: 40px
-        float: left
-        
+      @media (min-width: $default) 
+        margin-left: 30px
+
+      @media (min-width: $large-display) 
+        margin-left: 73px        
+
     .social-links
       @media (min-width: $tablets)
         float: right
 
     .social-links  
       margin-bottom: 35px
+      margin-left: -15px
       @media (min-width: $tablets)
+        margin-left: 0px
         margin-bottom: 0px
         
       ul

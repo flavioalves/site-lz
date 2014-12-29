@@ -10,16 +10,24 @@
       bottom: 20px
       a.active 
         background: white
-  
+
+  .bx-controls
+    display: none
+
   .bxslider
     li.item
+
       img.bg 
-        min-height: 100%
-        min-width: 1024px        
-        width: 100%
-        height: auto
         top: 0
-        left: 0    
+        left: 0                 
+        width: 100%        
+        min-width: 1024px      
+        height: auto  
+        //@media (min-width: $tablets)
+          //min-width: 768px
+        //@media (min-width: $default)
+          //min-height: 100%
+          //min-width: 1024px
 
       .info
         position: absolute
@@ -27,9 +35,10 @@
         z-index: 10
         color: white
         text-align: right
-        right: 20px        
+        right: 20px     
+        
         @media (min-width: $tablets)
-          right: 150px
+          right: 100px
           
         .obra
           font-size: 24px
@@ -37,6 +46,7 @@
 
         .cliente
           font-size: 18px
+
         .descricao
           font-size: 14px
           width: 300px
@@ -48,7 +58,6 @@
       border: 1px solid white
 
 .info-content  
-
   p 
     margin-bottom: 23px
     line-height: 25px
@@ -70,9 +79,17 @@
 
 
 .sobre-container
-  height: 600px  
+  height: 600px    
+  background: white
+
   @media (min-width: $tablets)
-    background: url('sobre-home-cover.png') center right no-repeat  
+    background: url("sobre-home-cover.png") 200% 50% no-repeat
+
+  @media (min-width: $default)  
+    background: url("sobre-home-cover.png") 100% 50% no-repeat
+
+  @media (min-width: $large-display) 
+    background: url("sobre-home-cover.png") center right no-repeat
 
   .info-content
     margin-top: 60px
@@ -82,8 +99,17 @@
 
 .oque-fazemos-container  
   background-color: #335461  
-  background: url('oque-fazemos-home-cover.png') center left no-repeat  #335461
   color: #dbdbdb 
+  background: #335461
+
+  @media (min-width: $tablets)
+    background: url("oque-fazemos-home-cover.png") -170%% 50% no-repeat #335461
+
+  @media (min-width: $default)
+    background: url("oque-fazemos-home-cover.png") -25% 50% no-repeat #335461
+
+  @media (min-width: $large-display)          
+    background: url('oque-fazemos-home-cover.png') center left no-repeat  #335461
 
   .info-content    
     margin-top: 50px
