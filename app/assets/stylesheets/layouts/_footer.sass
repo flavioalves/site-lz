@@ -17,7 +17,13 @@ footer#contato
 
     .address, .contacts, .social-links           
       margin-top: 23px      
-      
+      a 
+        color: #2d2d2d
+        
+        &:hover
+          text-decoration: none 
+          +fade-on-hover
+
       @media (min-width: $tablets) 
         float: right
         margin-left: 30px       
