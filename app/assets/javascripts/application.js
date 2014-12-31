@@ -14,6 +14,7 @@
 
 #= require site-menu.js
 #= require slider-home.js
+#= require projetos.js
 
 
 
