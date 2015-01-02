@@ -1,0 +1,24 @@
+- content_for :body_class, 'l-cliente-admin'
+
+.slider-container
+  ul.bxslider
+    li.item
+      = image_tag('slider-2.png', class: 'bg') 
+
+.admin
+  .container
+    .row
+      .col-md-5
+        span.name Olá, Roberto Augusto
+        a.logout href="#" sair
+
+        ul.project-list
+          li 
+            span.project Nome do Projeto
+            span.description Vivamus sagittis lacus  augue laoreet rutrum
+
+      .col-md-10.col-md-offset-1
+        h1.title Arquivos
+
+        ul.files
+          li.file

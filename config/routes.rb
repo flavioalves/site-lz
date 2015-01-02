@@ -11,5 +11,7 @@ SiteLZ::Application.routes.draw do
 
   get 'projetos'                         => 'projects#index'
   get 'projetos/:category/:name'         => 'projects#show'
+  get 'clientes/:name'                   => 'clients#index'
+  
   get ':slug'                            => 'pages#show',     as: :page
 end
