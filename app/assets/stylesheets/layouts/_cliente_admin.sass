@@ -18,22 +18,32 @@
       margin-top: 50px
       border-bottom: 1px solid #d9d9d9
       padding-bottom: 40px
+      margin-bottom: 0px
 
     ul.project-list
       padding-left: 0px
       list-style: none
-
-    ul.project-list
       margin-top: 20px
 
       li
         padding: 15px
         border: 1px solid #335461
+        cursor: pointer
+
+        .info
+          display: inline-block
+          width: 85%
+
         span
           display: block
           color: #3e3e3e
 
           &.number 
+            display: inline-block
+            font-size: 26px
+            vertical-align: top
+            margin-top: -4px
+            width: 12%
 
           &.project
             font-size: 18px
@@ -42,3 +52,57 @@
 
           &.description 
             font-size: 14px
+
+        &.active
+          background: #335461
+          span
+            color: white !important
+
+  ul.files
+    padding-left: 0px
+    list-style: none
+
+    li.file
+      border-bottom: 1px solid #e5e5e5
+      display: inline-block
+      padding: 30px 0px
+
+      .col-md-5
+        margin-left: -10px
+
+      &:last-of-type
+        border-bottom: none
+        padding-bottom: 100px
+
+      span
+        &.date
+        &.file-name
+          display: block
+          text-transform: uppercase
+          font-weight: bold
+          line-height: 16px
+          font-size: 16px
+          margin-top: 5px
+
+        &.description 
+          font-weight: 300          
+          font-size: 14px
+
+      a.download
+        color: #2d2d2d
+        display: block
+        text-transform: uppercase
+        padding: 15px 50px 15px 50px
+        border: 1px solid #2d2d2d        
+        background: url("download.png") no-repeat 10% 42%
+        width: 160px
+        margin-top: 20px
+        &:hover
+          text-decoration: none
+          +fade-on-hover
+
+
+
+        
+
+
