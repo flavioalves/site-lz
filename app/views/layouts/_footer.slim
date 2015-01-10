@@ -14,7 +14,7 @@ footer#contato role="contentinfo"
         zoom:13,
         scrollwheel: false,
         draggable: false,
-        center:new google.maps.LatLng(-15.8523196,-47.90206139999998),
+        center:new google.maps.LatLng(-15.8355568,-47.8652233),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
@@ -24,9 +24,9 @@ footer#contato role="contentinfo"
       map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
       map.setOptions({styles: styles});
 
-      marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-15.8523196, -47.90206139999998)});
+      marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-15.8355568,-47.8652233)});
 
-      infowindow = new google.maps.InfoWindow({content:"<b>LZ Planejamento</b><br/>SHIS Ql 12, Bloco B, Sala 210, Lago Sul<br/> Bras&iacute;lia - DF" });
+      infowindow = new google.maps.InfoWindow({content:"<b>LZ Planejamento</b><br/>SHIS QI 11, Bloco G, Salas 202/203, Lago Sul<br/> Bras&iacute;lia - DF" });
       google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
   
   .container  
@@ -36,8 +36,8 @@ footer#contato role="contentinfo"
       .contacts
         <a href="mailto:contato@lzplanejamento.com.br">contato@lzplanejamento.com.br</a> <br/>+55 (61) 3248 0117
 
-      .address
-        'SHIS Ql 12, Bloco B, Sala 210,<br/>Lago Sul, Brasília - DF        
+      .address        
+        'SHIS QI 11, Bloco G, Salas 202/203,<br/>Lago Sul, Brasília - DF        
 
       .social-links
         ul
@@ -46,9 +46,6 @@ footer#contato role="contentinfo"
 
           a href="#" target="_blank"          
             li.pinterest 
-
-          a href="#" target="_blank"          
-            li.twitter 
 
           a href="#" target="_blank"          
             li.facebook 
