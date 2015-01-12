@@ -1,62 +1,37 @@
 .slider-container
-  .bx-viewport, .bx-wrapper
-    position: relative
-    top: 0
-    left: 0
-    border: none !important
-    margin: 0px auto
 
-    .bx-controls .bx-pager    
-      bottom: 20px
-      a.active 
-        background: white
+  .item
+    .info
+      position: relative
+      //bottom: 150px      
+      z-index: 10
+      color: white
+      text-align: right
+      margin-right: 10px
+      margin-top: -150px
 
-  .bx-controls
-    display: none
+      @media (min-width: $tablets) 
+        margin-top: -200px
 
-  .bxslider
-    li.item
+      @media (min-width: $default) 
+        margin-top: -250px
 
-      img.bg 
-        top: 0
-        left: 0                 
-        width: 100%        
-        min-width: 1024px      
-        height: auto  
-        //@media (min-width: $tablets)
-          //min-width: 768px
-        //@media (min-width: $default)
-          //min-height: 100%
-          //min-width: 1024px
+      @media (min-width: $large-display) 
+        margin-top: -350px
 
-      .info
-        position: relative
-        //bottom: 150px
-        margin-top: -150px
-        z-index: 10
-        color: white
-        text-align: right
-        margin-right: 10px
+      .obra
+        font-size: 32px
+        text-transform: uppercase
+        font-weight: 300
 
-        .obra
-          font-size: 32px
-          text-transform: uppercase
-          font-weight: 300
+      .cliente
+        font-size: 26px
+        font-weight: 300
 
-        .cliente
-          font-size: 26px
-          font-weight: 300
-
-        .descricao
-          font-size: 14px
-          width: 300px
-          float: right
-
-  .bx-wrapper 
-    .bx-pager.bx-default-pager a
-      background: transparent
-      border-radius: 0px
-      border: 1px solid white
+      .descricao
+        font-size: 14px
+        width: 300px
+        float: right
 
 .info-content  
   p 

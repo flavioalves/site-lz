@@ -1,23 +1,46 @@
 - content_for :body_class, 'l-home'
 
 .slider-container
-  ul.bxslider
-    li.item
-      = image_tag('slider-2.png', class: 'bg') 
+  .royalSlider.rsDefault
+    .item
+      = image_tag('slide-img-1.png', class: 'rsImg') 
       .container
         .info 
           .obra Primeira obra
           .cliente Cliente A
           .descricao Donec id elit non mi porta gravida at eget praesent commodo.
 
-    li.item 
-      = image_tag('slider-1.png', class: 'bg')
+    .item
+      = image_tag('slide-img-2.png', class: 'rsImg') 
       .container
         .info 
           .obra Segunda obra
           .cliente Cliente B
           .descricao Donec id elit non mi porta gravida at eget praesent commodo.
 
+    .item
+      = image_tag('slide-img-3.png', class: 'rsImg') 
+      .container
+        .info 
+          .obra Terceira obra
+          .cliente Cliente C
+          .descricao Donec id elit non mi porta gravida at eget praesent commodo.
+
+    .item
+      = image_tag('slide-img-4.png', class: 'rsImg') 
+      .container
+        .info 
+          .obra Quarta obra
+          .cliente Cliente D
+          .descricao Donec id elit non mi porta gravida at eget praesent commodo.
+
+    .item
+      = image_tag('slide-img-5.png', class: 'rsImg') 
+      .container
+        .info 
+          .obra Quinta obra
+          .cliente Cliente E
+          .descricao Donec id elit non mi porta gravida at eget praesent commodo.                              
 .sobre-container
   .container
     .info-content  

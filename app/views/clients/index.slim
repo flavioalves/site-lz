@@ -1,10 +1,13 @@
 - content_for :body_class, 'l-cliente-admin'
 
 .slider-container
-  ul.bxslider
-    li.item
-      = image_tag('slider-2.png', class: 'bg') 
-
+  .royalSlider
+    .item
+      = image_tag('slider-2.png', class: 'rsImg') 
+      .container
+        .cover-info 
+          .title Nome da Construtora     
+      
 .admin
   .container
     .row

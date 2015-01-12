@@ -1,13 +1,13 @@
 - content_for :body_class, 'l-empresa'
 
 .slider-container
-  ul.bxslider
-    li.item 
-      = image_tag('escritorio-cover.png', class: 'bg')
+  .royalSlider
+    .item
+      = image_tag('escritorio-cover.png', class: 'rsImg') 
       .container
         .cover-info 
           .title Sobre a LZ<br/>Planejamento
-          //.subtitle “Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
+          .subtitle “Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
   .nav-down
 
 .sobre
@@ -15,7 +15,7 @@
     .row
       .col-md-5
         //h1.title Sobre a LZ<br/>Planejamento
-        h2.subtitle “Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
+        //h2.subtitle “Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
 
       .col-md-9.col-md-offset-1
         p A LZ Planejamento foi criada em dezembro de 2007 para suprir a demanda gerada pelo crescimento da indústria da construção civil em Brasília. Desde então vem expandindo suas atividades com atuações nas regiões centro-oeste, sudeste e nordeste. Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras.
@@ -42,7 +42,7 @@
 
     .row
       ul.time
-        li.col-md-4
+        li.team-member
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -53,8 +53,10 @@
                   //span.position Engenheiro civil
                   p.bio
                     'Engenheiro civil pela Escola Politécnica da Universidade de São Paulo. Mais de 30 anos de experiência e atuação na área de gerenciamento e planejamento de obras. Fundador da LZ Planejamento em 2007.
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin                         
 
-        li.col-md-4 
+        li.team-member 
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -64,8 +66,10 @@
                   span.name Alessio Gallizio
                   p.bio
                     'Arquiteto e urbanista pela Universidade de Brasília e mestre pelo Politécnico de Turim (Itália). Na LZ Planejamento desde 2011.
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin                         
 
-        li.col-md-4            
+        li.team-member            
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -74,9 +78,11 @@
                 .member
                   span.name Bianca de Almeida Cardoso
                   p.bio
-                    'arquiteta e urbanista pelo Centro Universitário de Brasília, cursando MBA na Universidade de São Paulo. Na LZ Planejamento desde 2011.     
+                    'arquiteta e urbanista pelo Centro Universitário de Brasília, cursando MBA na Universidade de São Paulo. Na LZ Planejamento desde 2011.  
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin                            
 
-        li.col-md-4 
+        li.team-member 
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -86,8 +92,10 @@
                   span.name Pâmela Arrais Hodon
                   p.bio
                     'arquiteta e urbanista pelo Centro Universitário de Brasília. Na LZ Planejamento desde 2012.
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin                         
 
-        li.col-md-4           
+        li.team-member           
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -97,8 +105,10 @@
                   span.name João Augusto Pereira Júnior
                   p.bio
                     'arquiteto e urbanista pela Universidade de Brasília, mestrando pelo Politécnico de Turim (Itália). Na LZ Planejamento desde 2012.
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin                         
                                       
-        li.col-md-4             
+        li.team-member             
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -107,9 +117,11 @@
                 .member
                   span.name Felipe Valadares Faim Carmona
                   p.bio
-                    'engenheiro civil pela Universidade de Brasília. Na LZ Planejamento entre 2011-2012 retornando em 2014.       
+                    'engenheiro civil pela Universidade de Brasília. Na LZ Planejamento entre 2011-2012 retornando em 2014.
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin         
 
-        li.col-md-4             
+        li.team-member             
           .flip-container ontouchstart="this.classList.toggle('hover');"
             .flipper
               .front
@@ -118,7 +130,9 @@
                 .member
                   span.name Léa Ferreira Laterza
                   p.bio
-                    'engenheira agrônoma pela Universidade de Brasília. Pós-graduação em auditoria e controle governamental pelo TCU. Mais de 30 anos de experiência em recursos humanos e auditoria de RH. Na LZ desde 2014.                        
+                    'engenheira agrônoma pela Universidade de Brasília. Pós-graduação em auditoria e controle governamental pelo TCU. Mais de 30 anos de experiência em recursos humanos e auditoria de RH. Na LZ desde 2014.  
+                  a href="#" target="_blank"
+                    span.fa.fa-linkedin                                               
 
 
 

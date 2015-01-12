@@ -1,14 +1,12 @@
 - content_for :body_class, 'l-login'
 
-.slider-container
-  ul.bxslider
-    li.item 
-      = image_tag('login-cover.png', class: 'bg')
-      .container
-        .login-form
-          h1 Área do cliente
-          h2 Espaço exclusivo para clientes da <b>LZ planejamento</b>
-          form autocomplete="off"
-            input#email name="email-lz" type="text" placeholder="E-mail"  
-            input#password name="password-lz" type="password" placeholder="Senha"  
-            button.btn type="button" Enviar
+
+= image_tag('login-cover.png', class: 'bg')
+.container
+  .login-form
+    h1 Área do cliente
+    h2 Espaço exclusivo para clientes da <b>LZ planejamento</b>
+    form autocomplete="off"
+      input#email name="email-lz" type="text" placeholder="E-mail"  
+      input#password name="password-lz" type="password" placeholder="Senha"  
+      button.btn type="button" Enviar

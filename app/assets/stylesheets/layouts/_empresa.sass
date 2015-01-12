@@ -65,10 +65,14 @@
       margin-top: 40px
       margin-left: 12px
 
-      li.col-md-4 
+      li.team-member
         margin: 0px
         padding: 0px
-        width: 24.7%
+        width: 100%
+        @media (min-width: $tablets)
+          width: 32.7%
+        @media (min-width: $default)
+          width: 24.7%          
 
         img
           vertical-align: middle
@@ -80,6 +84,10 @@
           color: white   
           height: 100%   
           padding: 20px 
+          @media (min-width: $tablets)
+            padding: 10px
+          @media (min-width: $default)
+            padding: 20px 
 
           filter: alpha(opacity=60)
           opacity: .6
@@ -87,10 +95,16 @@
 
           span.name
             font-weight: bold
-            text-transform: uppercase
-            font-size: 18px
+            text-transform: uppercase            
             white-space: normal
-      
+            font-size: 18px
+            @media (min-width: $tablets)
+              font-size: 12px
+            @media (min-width: $default)
+              font-size: 14px         
+            @media (min-width: $large-display)
+              font-size: 18px    
+
           span.position
             font-weight: normal
             text-transform: uppercase
@@ -101,14 +115,33 @@
 
           p.bio   
             font-weight: 300
-            color: white    
-            position: absolute            
-            margin-top: 20px
+            color: white                         
+            margin-top: 15px
             left: 0
             right: 0
-            padding: 0 20px
-            font-size: 14px
+            padding: 0 
             white-space: normal
+            font-size: 14px
+            @media (min-width: $tablets)
+              font-size: 12px
+            @media (min-width: $default)
+              font-size: 14px                     
+          a 
+            color: white
+            position: absolute
+            font-size: 24px            
+            bottom: 10px            
+            right: 25px
+            +fade-on-hover
+
+            @media (min-width: $tablets)
+              font-size: 18px            
+              bottom: 5px            
+              right: 15px
+            @media (min-width: $default)
+              font-size: 24px            
+              bottom: 10px            
+              right: 25px            
 
         /* entire container, keeps perspective */
         .flip-container 
