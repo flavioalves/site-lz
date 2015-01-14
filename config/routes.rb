@@ -1,4 +1,6 @@
 SiteLZ::Application.routes.draw do
+  devise_for :users
+  
   get '/usuarios/minha-conta' => 'settings#edit', as: :edit_user
   put '/usuarios' => 'settings#update', as: :update_user
   

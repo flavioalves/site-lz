@@ -5,6 +5,7 @@ gem 'rails',                   '4.1.0'
 gem 'pg'
 gem 'slim'
 gem 'unicorn'
+gem 'devise'
 
 gem 'friendly_id'
 gem 'resque'
