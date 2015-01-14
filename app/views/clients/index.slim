@@ -12,8 +12,8 @@
   .container
     .row
       .col-md-5
-        span.name Olá, Roberto Augusto
-        a.logout href="#" sair
+        span.name Olá, #{current_user.name}
+        a.logout href="#{destroy_user_session_path}" sair
 
         ul.project-list
           li 

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150113142247) do
   enable_extension "plpgsql"
 
   create_table "users", force: true do |t|
+    t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

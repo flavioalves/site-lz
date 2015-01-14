@@ -20,5 +20,6 @@ module SiteLZ
 
     #config.assets.paths << "#{Rails}/vendor/spacelab-theme"
     config.time_zone = 'Brasilia'
+    config.i18n.default_locale = :'pt-BR'
   end
 end
