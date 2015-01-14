@@ -1,0 +1,78 @@
+.l-produtos
+  .intro
+    margin: 70px 0px
+
+  p 
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 20px
+
+  h2
+    font-size: 24px
+    font-weight: bold
+    text-transform: uppercase      
+    padding-left: 45px
+    line-height: 35px
+    background: url("produtos-sprite-icons.png") center left no-repeat
+    margin-bottom: 25px
+
+    &.planejamento
+      background-position: 0px 0px
+
+    &.canteiro
+      background-position: 0px -35px
+
+    &.acompanhamento
+      background-position: 0px -69px
+
+  h3.subtitle
+    font-size: 17px
+    font-weight: bold
+    text-transform: uppercase  
+    margin: 5px 0px 20px 0px
+
+
+  .planejamento-container  
+    padding: 50px 0px 70px 0      
+    color: #d6dddf
+    background: $green-dark
+
+    @media (min-width: $tablets)
+      background: url("oque-fazemos-home-cover.png") -170%% 50% no-repeat $green-dark
+
+    @media (min-width: $default)
+      background: url("oque-fazemos-home-cover.png") -25% 50% no-repeat $green-dark
+
+    @media (min-width: $large-display)          
+      background: url('oque-fazemos-home-cover.png') center left no-repeat  $green-dark  
+
+  .canteiro-container  
+    padding: 50px 0px 70px 0           
+    color: black
+    background: white
+
+    @media (min-width: $tablets)
+      background: url("canteiro-bkg.png") 120% 50% no-repeat white
+
+    @media (min-width: $default)
+      padding: 50px 0px 200px 0
+      background: url("canteiro-bkg.png") 60% 50% no-repeat white
+
+    @media (min-width: $large-display)   
+      padding: 50px 0px 300px 0       
+      background: url('canteiro-bkg.png') center left no-repeat  white
+
+
+  .acompanhamento-container  
+    padding: 50px 0px 70px 0      
+    color: #d6dddf
+    background: $green-dark
+
+    @media (min-width: $tablets)
+      background: url("oque-fazemos-home-cover.png") -170%% 50% no-repeat $green-dark
+
+    @media (min-width: $default)
+      background: url("oque-fazemos-home-cover.png") -25% 50% no-repeat $green-dark
+
+    @media (min-width: $large-display)          
+      background: url('oque-fazemos-home-cover.png') center left no-repeat  $green-dark    

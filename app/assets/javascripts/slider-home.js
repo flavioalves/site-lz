@@ -3,6 +3,7 @@ $(document).ready(function(){
   var height = $(window).height();
   var width = $(window).width();
 
+  $(".slider-container").height(height);
   $(".royalSlider").royalSlider({
       keyboardNavEnabled: true,
       autoScaleSlider: true,
@@ -12,7 +13,7 @@ $(document).ready(function(){
       center: false
   });  
  
-
+  //$('.sobre-container').css("margin-top", 200);
   /*
   //fit page on screen
   var sections = $(".slider-container");

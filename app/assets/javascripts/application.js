@@ -13,8 +13,8 @@
 #= require bootstrap/bootstrap.js
 #= require royalslider/jquery.royalslider.min.js
 
-#= require site-menu.js
 #= require slider-home.js
+#= require site-menu.js
 #= require projetos.js
 
 

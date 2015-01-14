@@ -1,13 +1,4 @@
-$(function(){
-
-  // controll header
-  var myHeader = document.querySelector("header");
-  var headroom  = new Headroom(myHeader);
-  headroom.init({
-    offset : 200,
-    tolerance : 200,
-  }); 
-
+$(document).ready(function(){
 
   $("#site-menu").mmenu({
       classes     : 'mm-white',
@@ -20,6 +11,16 @@ $(function(){
         pageNodetype: "section.page"
       }
     });  
+
+  // controll header
+  var myHeader = document.querySelector("header");
+  var headroom  = new Headroom(myHeader);
+  headroom.init({
+    offset : 200,
+    tolerance : 200,
+  }); 
+
+
 
   $('.main-menu li').click(function(e){
     $('.main-menu').find('li.active').removeClass('active');
