@@ -25,9 +25,9 @@ header#header
               a href="/clientes" Clientes
             li 
               a href="#{root_path}#contato" Contato
-            li 
-              a href="/clientes/#{current_user.name}" ÁREA DO CLIENTE              
             - if user_signed_in?  
+              li 
+                a href="/clientes/#{current_user.name}" ÁREA DO CLIENTE              
               li
                 a href="#{destroy_user_session_path}" Sair
             - else
