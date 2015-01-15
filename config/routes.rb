@@ -1,4 +1,6 @@
 SiteLZ::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
 
   get '/usuarios/minha-conta' => 'settings#edit', as: :edit_user
