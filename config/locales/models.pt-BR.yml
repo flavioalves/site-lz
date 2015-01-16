@@ -3,6 +3,8 @@ pt-BR:
     models:
       page: Página(s)
       user: Usuário(s)
+      client: Cliente(s)
+      project: Projeto(s)
       admin_user: Administrador(es)
       content_block: Bloco(s) de Conteúdo
       contact: Contato(s)
@@ -42,3 +44,14 @@ pt-BR:
         updated_at: Atualizado em
         current_sign_in_at: Último login em
         sign_in_count: No. de logins
+      client:
+        name: Nome  
+        users: Usuários
+        projects: Projetos
+        created_at: Criado em
+        updated_at: Atualizado em
+      project:
+        name: Nome 
+        client: Cliente
+        created_at: Criado em
+        updated_at: Atualizado em 
