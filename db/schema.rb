@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 20150115234622) do
   add_index "clients", ["name"], name: "index_clients_on_name", unique: true, using: :btree
 
   create_table "projects", force: true do |t|
-    t.integer  "client_id"
     t.string   "name"
+    t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -78,9 +78,9 @@ ActiveRecord::Schema.define(version: 20150115234622) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "client_id"
   end
 
   add_index "users", ["client_id"], name: "index_users_on_client_id", using: :btree

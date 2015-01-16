@@ -6,7 +6,7 @@ ActiveAdmin.register Project do
   filter :created_at
 
   form do |f|
-    f.inputs "Project Details" do
+    f.inputs do
       f.input :name
     end
     f.actions
