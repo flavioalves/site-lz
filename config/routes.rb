@@ -1,6 +1,8 @@
 SiteLZ::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
-  
+
   get '/usuarios/minha-conta' => 'settings#edit', as: :edit_user
   put '/usuarios' => 'settings#update', as: :update_user
   
@@ -13,7 +15,7 @@ SiteLZ::Application.routes.draw do
 
   get 'projetos'                         => 'projects#index'
   get 'projetos/:category/:name'         => 'projects#show'
-  get 'clientes/:name'                   => 'clients#index'
+  get 'clientes/:name'                   => 'clients#index', as: :clients
   
   get ':slug'                            => 'pages#show',     as: :page
 end

@@ -6,14 +6,14 @@
       = image_tag('cover/AREA_CLIENTE.jpg', class: 'rsImg') 
       .container
         .cover-info 
-          .title Nome da Construtora     
+          .title #{current_user.client.name}    
       
 .admin
   .container
     .row
       .col-md-5
-        span.name Olá, Roberto Augusto
-        a.logout href="#" sair
+        span.name Olá, #{current_user.name}
+        a.logout href="#{destroy_user_session_path}" sair
 
         ul.project-list
           li 

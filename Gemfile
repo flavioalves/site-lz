@@ -6,6 +6,7 @@ gem 'pg'
 gem 'slim'
 gem 'unicorn'
 gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'friendly_id'
 gem 'resque'

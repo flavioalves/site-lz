@@ -25,10 +25,13 @@ header#header
               a href="/clientes" Clientes
             li 
               a href="#{root_path}#contato" Contato
-            li 
-              a href="/clientes/nome" ÁREA DO CLIENTE              
-            li 
-              a href="#{new_user_session_path}" Login
+            - if user_signed_in?  
+              li 
+                a href="/clientes/#{current_user.client.name}" ÁREA DO CLIENTE              
+              li
+                a href="#{destroy_user_session_path}" Sair
+            - else
+              li
+                a href="#{new_user_session_path}" Login  
 
         a#logo href="#{root_path}" title="LZ Planejamento"
-     

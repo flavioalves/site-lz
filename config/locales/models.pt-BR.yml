@@ -3,6 +3,8 @@ pt-BR:
     models:
       page: Página(s)
       user: Usuário(s)
+      client: Cliente(s)
+      project: Projeto(s)
       admin_user: Administrador(es)
       content_block: Bloco(s) de Conteúdo
       contact: Contato(s)
@@ -38,7 +40,26 @@ pt-BR:
         password: Senha
         password_confirmation: Confirmação da Senha
         remember_me: Lembrar-me
+        encrypted_password: Senha criptografada
+        reset_password_token: Token de redefinição de senha
+        reset_password_sent_at: Redefinição de senha enviada em
+        remember_created_at: Lembrança criada em
+        sign_in_count: No. de logins
+        current_sign_in_at: Atual login em
+        last_sign_in_at: Último login em
+        current_sign_in_ip: Atual ip de login
+        last_sign_in_ip: Último ip de login 
+        client: Cliente
         created_at: Criado em
         updated_at: Atualizado em
-        current_sign_in_at: Último login em
-        sign_in_count: No. de logins
+      client:
+        name: Nome  
+        users: Usuários
+        projects: Projetos
+        created_at: Criado em
+        updated_at: Atualizado em
+      project:
+        name: Nome 
+        client: Cliente
+        created_at: Criado em
+        updated_at: Atualizado em 
