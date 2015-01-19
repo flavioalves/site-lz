@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 20150115234622) do
   add_index "projects", ["client_id"], name: "index_projects_on_client_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -78,12 +77,10 @@ ActiveRecord::Schema.define(version: 20150115234622) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "users", ["client_id"], name: "index_users_on_client_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
