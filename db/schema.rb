@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20150120222604) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
+    t.string   "description"
     t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -3,6 +3,16 @@ ActiveAdmin.register User do
                 project_ids: []
 
   belongs_to :client
+  
+  controller do
+    def update
+      if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+        params[:user].delete("password")
+        params[:user].delete("password_confirmation")
+      end
+      super
+    end
+  end
 
   index do
     selectable_column
@@ -25,9 +35,23 @@ ActiveAdmin.register User do
     f.inputs do
       f.input :name
       f.input :email
-      f.input :password
-      f.input :password_confirmation
-      f.input :projects, as: :check_boxes, collection: Project.where(client_id: params[:client_id])
+      if f.object.new_record?
+        f.input :password 
+        f.input :password_confirmation
+      end 
+      projects = user.client.projects
+      f.input :projects, as: :check_boxes, collection: projects unless projects.blank?
+    end
+
+    unless f.object.new_record?
+      f.inputs do
+        li do 
+          label I18n.t("helpers.label.user.change_password")
+          span check_box_tag 'change_password', 'false', false
+        end
+        f.input :password 
+        f.input :password_confirmation
+      end
     end
     f.actions
   end

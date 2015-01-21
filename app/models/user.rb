@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
   has_many :projects, through: :user_projects
   accepts_nested_attributes_for :user_projects
 
-  validates :name, presence: true
+  validates :name, :email, presence: true
+  validates :password, :password_confirmation, presence: true, on: :create
+  validates :password, confirmation: true
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me,
