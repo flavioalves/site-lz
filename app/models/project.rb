@@ -7,5 +7,5 @@ class Project < ActiveRecord::Base
   validates :name, presence: true
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :user_ids
+  attr_accessible :name, :description, :user_ids
 end
