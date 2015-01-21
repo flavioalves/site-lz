@@ -1,5 +1,7 @@
 ActiveAdmin.register User do
-  permit_params :name, :email, :password, :password_confirmation
+  permit_params :name, :email, :password, :password_confirmation,
+                project_ids: []
+
   belongs_to :client
 
   index do
@@ -25,6 +27,7 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :projects, as: :check_boxes, collection: Project.where(client_id: params[:client_id])
     end
     f.actions
   end
