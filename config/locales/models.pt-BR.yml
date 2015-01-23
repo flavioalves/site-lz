@@ -52,6 +52,7 @@ pt-BR:
         client: Cliente
         created_at: Criado em
         updated_at: Atualizado em
+        projects: Projetos
       client:
         name: Nome  
         users: Usuários
@@ -60,6 +61,8 @@ pt-BR:
         updated_at: Atualizado em
       project:
         name: Nome 
+        description: Descrição
         client: Cliente
+        users: Usuários
         created_at: Criado em
         updated_at: Atualizado em 

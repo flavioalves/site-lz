@@ -8,7 +8,7 @@ pt-BR:
         new_password: Nova Senha
         new_password_confirmation: Confirmação da Nova Senha
         current_password: Senha Atual
-        change_password: Mudar minha senha
+        change_password: Mudar senha
         password_note: para não alterar, deixe em branco
         current_password_note:
           precisamos da sua senha atual para confirmar as alterações
