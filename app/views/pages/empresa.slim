@@ -4,11 +4,11 @@
   .royalSlider
     .item
       = image_tag('cover/SOBRE_A_LZ_A.png', class: 'bg') 
-      .container
+      .container.info-slider-container
         .cover-info 
           .title Sobre a LZ<br/>Planejamento
           .subtitle “Já trabalhou com mais de 30 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
-  .nav-down
+        .nav-down
 
 .sobre
   .container
@@ -27,9 +27,12 @@
           p A LZ apoia seus clientes em todas as fases de construção do empreendimento. Em conjunto com a equipe da obra, são feitos o planejamento inicial, o projeto de implantação do canteiro e os acompanhamentos periódicos de avanços físicos e financeiros.
 
           ul.produtos-list
-            li.planejamento Planejamento
-            li.canteiro Canteiro
-            li.acompanhamento Acompanhamento
+            a href="#{root_path}/produtos#planejamento"
+              li.planejamento Planejamento
+            a href="#{root_path}/produtos#canteiro"  
+              li.canteiro Canteiro
+            a href="#{root_path}/produtos#acompanhamento"              
+              li.acompanhamento Acompanhamento
 
 .equipe
   .container
@@ -118,7 +121,7 @@
                   span.name Felipe Valadares Faim Carmona
                   p.bio
                     'engenheiro civil pela Universidade de Brasília. Na LZ Planejamento entre 2011-2012 retornando em 2014.
-                  a href="br.linkedin.com/in/felipevfcarmona" target="_blank"
+                  a href="https://br.linkedin.com/in/felipevfcarmona" target="_blank"
                     span.fa.fa-linkedin         
 
         li.team-member             

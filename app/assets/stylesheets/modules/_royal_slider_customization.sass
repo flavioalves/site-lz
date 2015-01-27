@@ -22,5 +22,25 @@
 .rsSlide 
   min-height: 300px
 
- 
- 
+.info-slider-container
+  bottom: 190px
+  position: relative
+  
+  .nav-down
+    display: none
+    @media (min-width: $tablets)
+      display: block
+        
+  @media (min-width: $large-display)
+    bottom: 340px
+
+
+.rsArrow.rsArrowLeft
+  display: none !important
+  @media (min-width: $tablets)
+    display: block !important
+
+.rsArrow.rsArrowRight
+  display: none !important
+  @media (min-width: $tablets)
+    display: block !important

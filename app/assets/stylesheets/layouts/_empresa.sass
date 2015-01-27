@@ -7,10 +7,10 @@
     padding: 30px 0px
 
     @media (min-width: $tablets) 
-      padding: 30px 0px 60px 0px
+      padding: 60px 0px
       
     @media (min-width: $default) 
-      padding: 40px 0px 80px 0px
+      padding: 80px 0px
 
     h1.title
       margin-top: -2px
@@ -30,13 +30,16 @@
       @media (min-width: $tablets) 
         +horizontal-list
         margin-top: 20px
-        
+      a 
+        color: black 
+        +fade-on-hover 
       li
         text-transform: uppercase
         background: url('product-icons-black.png') no-repeat
         width: 33%
         line-height: 30px
         padding-left: 35px !important
+        color: black  
 
         margin-bottom: 10px  
         @media (min-width: $tablets) 

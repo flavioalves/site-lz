@@ -10,7 +10,12 @@ $(document).ready(function(){
       autoScaleSliderHeight: height,
       autoScaleSliderWidth: width,
       imageScaleMode: 'fill',
-      center: false
+      center: false,
+      autoPlay: {
+        // autoplay options go gere
+        enabled: true,
+        pauseOnHover: true
+      }
   });  
  
 });
