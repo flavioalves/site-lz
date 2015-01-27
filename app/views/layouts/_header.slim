@@ -1,9 +1,8 @@
 header#header
-  .header-container 
+  .header-top-container 
     .navbar.navbar-inverse role="navigation" 
       .container    
         a.navbar-brand.logotipo href="#{root_path}"
-        a.navbar-brand.logo href="#{root_path}"
 
         a.navbar-toggle.menu href="#site-menu" 
           span.sr-only
@@ -12,26 +11,22 @@ header#header
           span.icon-bar 
 
         nav#site-menu       
-          ul.main-menu
-            li 
-              a href="#{root_path}" Home 
-            li 
-              a href="/empresa" A empresa
-            li 
-              a href="/produtos" Produtos
-            li 
-              a href="/projetos" Projetos
-            li 
-              a href="/clientes" Clientes
-            li 
-              a href="#{root_path}#contato" Contato
-            - if user_signed_in?  
-              li 
-                a href="/clientes/#{current_user.client.name}" ÁREA DO CLIENTE              
-              li
-                a href="#{destroy_user_session_path}" Sair
-            - else
-              li
-                a href="#{new_user_session_path}" Login  
+          = render 'layouts/menu_itens'
+          
+        a#logo href="#{root_path}" title="LZ Planejamento"
+
+  .header-bar-container        
+    .navbar.navbar-inverse role="navigation" 
+      .container    
+        a.navbar-brand.logo href="#{root_path}"
+
+        a.navbar-toggle.menu href="#site-menu-bar" 
+          span.sr-only
+          span.icon-bar 
+          span.icon-bar 
+          span.icon-bar 
+
+        nav#site-menu-bar       
+          = render 'layouts/menu_itens'
 
         a#logo href="#{root_path}" title="LZ Planejamento"
