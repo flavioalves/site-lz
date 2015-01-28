@@ -4,6 +4,7 @@ $(document).ready(function(){
   var width = $(window).width();
 
   $(".slider-container").height(height);
+
   $(".royalSlider").royalSlider({
       keyboardNavEnabled: true,
       autoScaleSlider: true,
@@ -12,7 +13,6 @@ $(document).ready(function(){
       imageScaleMode: 'fill',
       center: false,
       autoPlay: {
-        // autoplay options go gere
         enabled: true,
         pauseOnHover: true
       }

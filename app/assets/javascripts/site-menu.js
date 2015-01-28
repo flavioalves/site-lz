@@ -35,5 +35,5 @@ $(document).ready(function(){
   if(heightToTop < offset){
     $('.header-top-container').fadeIn( "slow" );  
   }
-  
+
 });
