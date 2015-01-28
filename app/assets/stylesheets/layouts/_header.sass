@@ -14,8 +14,9 @@ header
 
   .navbar-brand.logotipo
     background: url('logotipo.png') no-repeat
-    height: 90px
-    width: 60px
+    background-size: contain
+    height: 100px
+    width: 70px
     margin-top: 10px
 
   .navbar-brand.logo
@@ -45,7 +46,12 @@ header
 
   .header-bar-container
     background-color: #363635
+    z-index: 999
   
+  .header-top-container
+    @media (min-width: $tablets)
+      margin-top: 30px
+
   .header-bar-container, .header-top-container 
     display: none
 
