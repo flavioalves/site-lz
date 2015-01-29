@@ -17,6 +17,7 @@
 #= require slider-home.js
 #= require site-menu.js
 #= require projetos.js
+#= require team-member.js
 
 
 

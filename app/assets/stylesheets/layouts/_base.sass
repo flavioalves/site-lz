@@ -45,14 +45,12 @@ button:hover
   position: absolute  
   width: 100%   
   bottom: 0px
-  display: none
-  @media (min-width: $tablets)
-    display: block
+  display: block
+  bottom: 20px
+  @media (min-width: $tablets)    
     bottom: 40px
   @media (min-width: $default)    
     bottom: 70px
-  @media (min-width: $large-display)
-    bottom: 180px
 
   .nav-down
     width: 35px
@@ -65,7 +63,9 @@ button:hover
     margin-right: 40px
     background: url('arrow-down.png') no-repeat center center  
     +fade-on-hover  
-      
+    display: none
+    @media (min-width: $tablets) 
+      display: block  
     &:hover
       cursor: pointer
 
