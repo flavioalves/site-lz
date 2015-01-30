@@ -18,6 +18,7 @@
 #= require site-menu.js
 #= require projetos.js
 #= require team-member.js
+#= require hgrid.js
 
 
 
