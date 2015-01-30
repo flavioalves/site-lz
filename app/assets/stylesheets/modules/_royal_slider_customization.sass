@@ -9,7 +9,10 @@
 
 
 .rsDefault 
-  .rsBullets    
+  background: white
+  
+  .rsBullets   
+    z-index: 0 
     background: none
     bottom: 10px
     height: 20px
@@ -22,5 +25,28 @@
 .rsSlide 
   min-height: 300px
 
- 
- 
+.rsOverflow
+  cursor: default !important
+  
+.info-slider-container
+  bottom: 190px
+  position: relative
+  
+  .nav-down
+    display: none
+    @media (min-width: $tablets)
+      display: block
+        
+  @media (min-width: $large-display)
+    bottom: 340px
+
+
+.rsArrow.rsArrowLeft
+  display: none !important
+  @media (min-width: $tablets)
+    display: block !important
+
+.rsArrow.rsArrowRight
+  display: none !important
+  @media (min-width: $tablets)
+    display: block !important

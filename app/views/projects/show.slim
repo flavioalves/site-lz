@@ -4,11 +4,13 @@
   .royalSlider
     .item
       = image_tag('slider-1.png', class: 'rsImg') 
-      .container
-        .cover-info 
-          .title Projetos LZ<br/>Planejamento
-          .subtitle “Já trabalhou com mais de 50 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
-  .nav-down
+      figure.rsCaption
+        .container
+          .cover-content
+            .cover-info 
+              .title Projetos LZ<br/>Planejamento
+              .subtitle “Já trabalhou com mais de 30 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
+            .nav-down       
 
 .projetos
   .container
@@ -33,10 +35,33 @@
             span.info = @project.type.name
           li.col-md-4  
             span.name Área
-            span.info = "#{ @project.area }m²"                        
-    .row
-      .masonry.js-masonry 
+            span.info = "#{ @project.area }m²"
+
+    .row style="padding: 60px 0px"
+      #grid.projgrid
         - @project.photos.each do |photo|
-          .item
-            = image_tag attachment_url(photo, :image, :fill, 375, 375)
-br
+          article.item.i1x1 data-block="1" 
+            a href="#"
+              = image_tag attachment_url(photo, :image, :fill, 458, 458)
+
+        article.item.i1x2 data-block="2" 
+          a href="#"
+            = image_tag('projetos/img-2.png')
+
+        article.item.i1x1 data-block="1" 
+          a href="#"
+            = image_tag('projetos/img-3.png')
+
+        article.item.i1x1 data-block="1" 
+          a href="#"
+            = image_tag('projetos/img-3.png')            
+
+        article.item.i1x1 data-block="1" 
+          a href="#"
+            = image_tag('projetos/img-4.png')
+
+        article.item.i1x2 data-block="2" 
+          a href="#"
+            = image_tag('projetos/img-5.png')  
+
+= render 'modules/lightbox'

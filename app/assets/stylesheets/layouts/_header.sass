@@ -14,16 +14,17 @@ header
 
   .navbar-brand.logotipo
     background: url('logotipo.png') no-repeat
-    height: 90px
-    width: 60px
+    background-size: contain
+    height: 100px
+    width: 70px
     margin-top: 10px
 
   .navbar-brand.logo
     background: url('logo-branca.png') no-repeat
     background-size: contain
     width: 154px
-    margin-top: 10px
-    display: none   
+    margin-top: 10px    
+    margin-bottom: 14px
 
 
   .navbar-toggle.menu
@@ -33,6 +34,8 @@ header
     border-radius: 0px
     width: 34px
     height: 34px
+    margin-right: 0px
+
     span.icon-bar
       margin-left: -4px
       width: 20px
@@ -41,38 +44,42 @@ header
     &:focus
       background: none
 
+  .header-bar-container
+    background-color: #363635
+    z-index: 999
+  
+  .header-top-container
+    @media (min-width: $tablets)
+      margin-top: 30px
 
+  .header-bar-container, .header-top-container 
+    display: none
 
-.headroom 
+#header.headroom 
   transition: transform 200ms linear
 
-.headroom--pinned 
-  transform: translateY(0%)
-  &.headroom--not-top
-    display: block
-    width: 100%
-    background-color: #363635
-    height: 75px
-
-    .logotipo
+  &.headroom--unpinned
+    transform: translateY(-100%)
+    .header-bar-container
       display: none
 
-    .logo
-      display: block 
+  &.headroom--pinned 
+    transform: translateY(0%)
+    .header-bar-container
+      display: block
+
+  &.headroom--not-top
+    .header-top-container  
+      display: none !important
 
   &.headroom--top      
-    .navbar-inverse    
-      background-color: transparent
-      border-color: transparent
+    .header-bar-container
+      display: none
 
-    .logotipo
+    .header-top-container  
       display: block 
+
+
+
       
-    .logo
-      display: none 
-
-.headroom--unpinned
-  transform: translateY(-100%)
-
-        
-        
+      
