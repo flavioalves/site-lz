@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20150130003445) do
     t.string   "name",       null: false
     t.string   "detail",     null: false
     t.string   "place",      null: false
-    t.float    "area",       null: false
+    t.integer  "area",       null: false
     t.integer  "client_id"
     t.integer  "type_id"
     t.string   "slug",       null: false

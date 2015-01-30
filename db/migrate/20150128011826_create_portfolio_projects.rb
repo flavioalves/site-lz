@@ -4,7 +4,7 @@ class CreatePortfolioProjects < ActiveRecord::Migration
       t.string :name, :null => false
     	t.string :detail, :null => false
     	t.string :place, :null => false
-    	t.float :area, :null => false
+    	t.integer :area, :null => false
       t.references :client, index: true
       t.references :type, index: true
       t.string :slug, :null => false
