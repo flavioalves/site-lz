@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   var height = $(window).height();
   var width = $(window).width();
-
   $(".slider-container").height(height);
 
   var useCaltion = ($(".l-home") && $(".l-home").length > 0) ? false : true;
@@ -20,5 +19,11 @@ $(document).ready(function(){
         pauseOnHover: true
       }
   });  
+
+  $('.nav-down').click(function(){
+    $('body,html').animate({
+      scrollTop: height
+    }, 400);
+  });
  
 });
