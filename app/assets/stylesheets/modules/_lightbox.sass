@@ -1,0 +1,136 @@
+//colors
+$white: #fff
+$color_storm_dust_approx: #666
+
+//fonts
+$font_0: Asap
+$font_1: sans-serif
+
+//urls
+$url_0: url("preloader-white.gif")
+$url_1: url("nextbtn.jpg")
+$url_2: url("backbtn.jpg")
+$url_3: url("closebtn.jpg")
+
+.lightbox 
+
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999
+
+
+  .boxContent 
+    margin: 30px
+    overflow: hidden
+    position: relative    
+
+    img 
+      display: block
+      position: absolute
+      left: 50%
+  
+  a 
+    &:link 
+      text-decoration: none
+    
+    &:visited 
+      text-decoration: none
+    
+    &.lbCloseBtn 
+      display: block
+      position: absolute
+      top: 30px
+      right: 30px
+      height: 35px
+      width: 34px
+      overflow: hidden
+      background: $white
+      span 
+        &.textB 
+          float: left
+          margin-left: 10px
+        
+        &.imgB 
+          background: $white $url_3 top left no-repeat
+          display: block
+          position: absolute
+          top: 0
+          right: 0
+          height: 35px
+          width: 34px
+        
+      
+    
+    &.lbBackBtn 
+      display: block
+      position: absolute
+      top: 200px
+      left: 30px
+      height: 35px
+      width: 34px
+      overflow: hidden
+      background: $white
+      span 
+        &.textB 
+          float: right
+          margin-right: 10px
+        
+        &.imgB 
+          background: $white $url_2 top left no-repeat
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          height: 35px
+          width: 34px
+        
+      
+    
+    &.lbNextBtn 
+      display: block
+      position: absolute
+      top: 200px
+      right: 30px
+      height: 35px
+      width: 34px
+      overflow: hidden
+      background: $white
+      span 
+        &.textB 
+          float: left
+          margin-left: 10px
+        
+        &.imgB 
+          background: $white $url_1 top right no-repeat
+          display: block
+          position: absolute
+          top: 0
+          right: 0
+          height: 35px
+          width: 34px
+        
+      
+    
+    span 
+      font-family: $font_0, $font_1
+      font-size: 12px
+      color: $color_storm_dust_approx
+      display: block
+      padding: 5px 0
+      &.textB 
+        margin: 5px 0 0
+      
+      &.imgB 
+      
+    
+  
+
+.lightbox 
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: $white
