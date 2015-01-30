@@ -17,68 +17,18 @@
         p style="margin-top: 60px;" Desde 2007 trabalhamos apoiando o desenvolvimento dos mais diversos empreendimentos. Temos muito orgulho do portfólio que construímos.
 
         .form-select-projects
-          select.select-clients
-            option CLIENTES
-            option Cliente A
-            option Cliente B
-            option Cliente c
-            option Cliente D        
-
-          select.select-categories
-            option CATEGORIAS
-            option A
-            option B
-            option C
-            option D        
-
+          = form_tag projetos_path, method: :get, remote: true do
+            = select_tag :client, options_from_collection_for_select(Client.all, 'id', 'name', params[:client]), class: 'select-clients', prompt: 'CLIENTES', :onchange => "this.form.submit()"
+            = select_tag :tag, options_from_collection_for_select(Tag.all, 'id', 'name', params[:tag]), class: 'select-categories', prompt: 'CATEGORIAS', :onchange => "this.form.submit()"
+            = select_tag :type, options_from_collection_for_select(Type.all, 'id', 'name', params[:type]), class: 'select-types', prompt: 'TIPOS', :onchange => "this.form.submit()"
+                
     .row
       .masonry.js-masonry 
-        .item
-          a href="/projetos/categoria/nome"
-            .info
-              span.name Lipsum dolor
-              span.resume Cras sit
-            .img-overlay
-            = image_tag('projetos/img-1.png')
-
-
-        .item
-          a href="/projetos/categoria/nome"
-            .info
-              span.name Lipsum dolor
-              span.resume Cras sit
-            .img-overlay
-            = image_tag('projetos/img-2.png')
-
-        .item
-          a href="/projetos/categoria/nome"
-            .info
-              span.name Lipsum dolor
-              span.resume Cras sit
-            .img-overlay
-            = image_tag('projetos/img-3.png')
-
-        .item
-          a href="/projetos/categoria/nome"
-            .info
-              span.name Lipsum dolor
-              span.resume Cras sit
-            .img-overlay
-            = image_tag('slider-1.png')
-
-        .item
-          a href="/projetos/categoria/nome"
-            .info
-              span.name Lipsum dolor
-              span.resume Cras sit
-            .img-overlay
-            = image_tag('projetos/img-4.png')
-
-        .item
-          a href="/projetos/categoria/nome"
-            .info
-              span.name Lipsum dolor
-              span.resume Cras sit
-            .img-overlay
-            = image_tag('projetos/img-2.png')
-          
+        - @projects.each do |project|
+          .item
+            a href="/projetos/categoria/#{project.slug}"
+              .info
+                span.name = project.name
+                span.resume = project.detail
+              .img-overlay
+              = image_tag attachment_url(project.photos.first, :image, :fill, 375, 375) unless project.photos.blank?

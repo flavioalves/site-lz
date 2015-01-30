@@ -7,6 +7,9 @@ gem 'slim'
 gem 'unicorn'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem "mini_magick"
+gem "refile", require: ["refile/rails", "refile/image_processing"]
+gem "aws-sdk"
 
 gem 'friendly_id'
 gem 'resque'

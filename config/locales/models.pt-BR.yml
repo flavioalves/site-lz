@@ -5,6 +5,9 @@ pt-BR:
       user: Usuário(s)
       client: Cliente(s)
       project: Projeto(s)
+      type: Tipo(s) de Projeto
+      portfolio_project: Projeto(s) do Portifólio
+      photo: Foto(s)
       admin_user: Administrador(es)
       content_block: Bloco(s) de Conteúdo
       contact: Contato(s)
@@ -53,16 +56,37 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
         projects: Projetos
+        client_id: Cliente
       client:
         name: Nome  
         users: Usuários
         projects: Projetos
+        portfolio_projects: Projetos do Portifólio
         created_at: Criado em
         updated_at: Atualizado em
       project:
         name: Nome 
-        description: Descrição
         client: Cliente
+        client_id: Cliente
         users: Usuários
         created_at: Criado em
-        updated_at: Atualizado em 
+        updated_at: Atualizado em
+      type:
+        name: Nome
+        created_at: Criado em
+        updated_at: Atualizado em
+      portfolio_project:
+        name: Nome
+        detail: Detalhe
+        place: Local
+        area: Área (m²)
+        tags: Categorias
+        type_id: Tipo
+        type: Tipo
+        client_id: Cliente
+        client: Cliente
+        created_at: Criado em
+        updated_at: Atualizado em
+      photo:
+        created_at: Criado em
+        updated_at: Atualizado em

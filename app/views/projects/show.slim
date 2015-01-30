@@ -15,40 +15,28 @@
     .row
       .col-md-9.col-md-offset-6.project-info
         h3 Detalhes
-        p.description Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.       
+        p.description = @project.detail       
         .category
-          span.planejamento Planejamento
+          - @project.tags.each do |tag|
+            span class=tag.class_name 
+              = tag.name
 
         ul.project-info-list
           li.col-md-4 
             span.name Local
-            span.info Brasília - DF
+            span.info = @project.place
           li.col-md-4  
             span.name Empresa
-            span.info Emplavi
+            span.info = @project.client.name
           li.col-md-4  
             span.name Tipologia
-            span.info Residencial
+            span.info = @project.type.name
           li.col-md-4  
             span.name Área
-            span.info 20.000m²                        
+            span.info = "#{ @project.area }m²"                        
     .row
       .masonry.js-masonry 
-        .item
-          = image_tag('projetos/img-1.png')
-
-        .item
-          = image_tag('projetos/img-2.png')
-
-        .item
-          = image_tag('projetos/img-3.png')
-
-        .item
-          = image_tag('slider-1.png')
-
-        .item
-          = image_tag('projetos/img-4.png')
-
-        .item
-          = image_tag('projetos/img-2.png')
-          
+        - @project.photos.each do |photo|
+          .item
+            = image_tag attachment_url(photo, :image, :fill, 375, 375)
+br

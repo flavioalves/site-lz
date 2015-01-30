@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120222604) do
+ActiveRecord::Schema.define(version: 20150130003445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,41 @@ ActiveRecord::Schema.define(version: 20150120222604) do
 
   add_index "clients", ["name"], name: "index_clients_on_name", unique: true, using: :btree
 
+  create_table "photos", force: true do |t|
+    t.string   "image_id"
+    t.integer  "portfolio_project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "photos", ["portfolio_project_id"], name: "index_photos_on_portfolio_project_id", using: :btree
+
+  create_table "portfolio_project_tags", force: true do |t|
+    t.integer  "portfolio_project_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "portfolio_project_tags", ["portfolio_project_id"], name: "index_portfolio_project_tags_on_portfolio_project_id", using: :btree
+  add_index "portfolio_project_tags", ["tag_id"], name: "index_portfolio_project_tags_on_tag_id", using: :btree
+
+  create_table "portfolio_projects", force: true do |t|
+    t.string   "name",       null: false
+    t.string   "detail",     null: false
+    t.string   "place",      null: false
+    t.float    "area",       null: false
+    t.integer  "client_id"
+    t.integer  "type_id"
+    t.string   "slug",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "portfolio_projects", ["client_id"], name: "index_portfolio_projects_on_client_id", using: :btree
+  add_index "portfolio_projects", ["slug"], name: "index_portfolio_projects_on_slug", unique: true, using: :btree
+  add_index "portfolio_projects", ["type_id"], name: "index_portfolio_projects_on_type_id", using: :btree
+
   create_table "projects", force: true do |t|
     t.string   "name"
     t.string   "description"
@@ -66,6 +101,19 @@ ActiveRecord::Schema.define(version: 20150120222604) do
   end
 
   add_index "projects", ["client_id"], name: "index_projects_on_client_id", using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string   "name",       null: false
+    t.string   "class_name", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "user_projects", force: true do |t|
     t.integer  "user_id"

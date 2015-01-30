@@ -5,6 +5,7 @@ en:
       Please <a href="http://browsehappy.com/">upgrade your browser</a> or 
       <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
     active_admin:
+      more_information: More Information
       administration: 'Administration'
       content: 'Content'
       reports: 'Reports'
