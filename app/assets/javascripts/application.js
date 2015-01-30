@@ -10,7 +10,6 @@
 
 #= require headroom.js
 #= require jquery.headroom.js
-#= require masonry.pkgd.min.js
 #= require bootstrap/bootstrap.js
 #= require royalslider/jquery.royalslider.min.js
 
