@@ -7,7 +7,10 @@ ActiveAdmin.register Photo do
 		    unless f.object.new_record?
 	    		li image_tag attachment_url(photo, :image, :fill, 375, 375)
 	    	end	
-	  		f.attachment_field :image
+	    	li do
+	    		f.label :image
+	  			f.attachment_field :image, direct: true
+	  		end	
 		end
 		f.actions
 	end
@@ -27,6 +30,9 @@ ActiveAdmin.register Photo do
 			end
 			row :created_at
 			row :updated_at
+			row :image_filename
+			row :image_size
+			row :image_content_type
 	    end
 	    active_admin_comments
 	end 	

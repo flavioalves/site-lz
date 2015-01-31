@@ -83,10 +83,18 @@ pt-BR:
         tags: Categorias
         type_id: Tipo
         type: Tipo
+        cover_image: Imagem de Capa
         client_id: Cliente
         client: Cliente
         created_at: Criado em
         updated_at: Atualizado em
+        cover_image_filename: Nome do arquivo
+        cover_image_size: Tamanho do arquivo
+        cover_image_content_type: Tipo do arquivo
       photo:
+        image: Imagem
+        image_filename: Nome do arquivo
+        image_size: Tamanho do arquivo
+        image_content_type: Tipo do arquivo
         created_at: Criado em
         updated_at: Atualizado em

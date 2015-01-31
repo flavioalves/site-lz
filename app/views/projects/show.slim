@@ -3,13 +3,13 @@
 .slider-container
   .royalSlider
     .item
-      = image_tag('slider-1.png', class: 'rsImg') 
+      = image_tag attachment_url(@project, :cover_image), class: 'rsImg'
       figure.rsCaption
         .container
           .cover-content
             .cover-info 
-              .title Projetos LZ<br/>Planejamento
-              .subtitle “Já trabalhou com mais de 30 empresas e seu currículo conta com mais de 600.000.00 m² de obras”
+              .title = @project.name
+              .subtitle 
             .nav-down       
 
 .projetos
