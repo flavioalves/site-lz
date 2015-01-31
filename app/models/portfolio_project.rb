@@ -2,16 +2,17 @@ class PortfolioProject < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name, use: [:slugged]
 
-  attachment :cover_image
+  	attachment :cover_image
 
 	scope :client, -> (client_id) { where client_id: client_id }
 	scope :type, -> (type_id) { where type_id: type_id }
-  # scope :tag, -> (tag_id) { where(tag_id: tag_id) }
+  	# scope :tag, -> (tag_id) { where(tag_id: tag_id) }
 
 	belongs_to :type
 	belongs_to :client
 
-	validates_presence_of :type, :name, :detail, :place, :area, :slug
+	validates_presence_of :type, :name, :detail, :place, :area, :slug,
+						  :cover_image
 
 	has_many :photos, :dependent => :destroy
 	accepts_nested_attributes_for :photos, :allow_destroy => true
