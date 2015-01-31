@@ -6,8 +6,8 @@ class PortfolioProject < ActiveRecord::Base
 
 	scope :client, -> (client_id) { where client_id: client_id }
 	scope :type, -> (type_id) { where type_id: type_id }
-  	# scope :tag, -> (tag_id) { where(tag_id: tag_id) }
-
+  	scope :tag, -> (tag_id) { joins(:portfolio_project_tags).where('portfolio_project_tags.tag_id = ?', tag_id)}
+	
 	belongs_to :type
 	belongs_to :client
 
