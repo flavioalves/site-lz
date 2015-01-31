@@ -25,5 +25,9 @@ class PortfolioProject < ActiveRecord::Base
 	attr_accessible :name, :detail, :place, :area, 
                 	:type, :type_id, :client, :client_id, 
                 	:photos_attributes, :photos, :tag_ids,
-                  :cover_image, :cover_image_id  
+                  :cover_image, :cover_image_id
+
+    def should_generate_new_friendly_id?
+    	name_changed? || super
+  	end               
 end
