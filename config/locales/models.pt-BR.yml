@@ -60,6 +60,7 @@ pt-BR:
         client_id: Cliente
       client:
         name: Nome  
+        brand: Marca
         users: Usuários
         projects: Projetos
         portfolio_projects: Projetos do Portifólio

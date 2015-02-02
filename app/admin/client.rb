@@ -1,5 +1,5 @@
 ActiveAdmin.register Client do
-	permit_params :name
+	permit_params :name, :brand
 
 	index do
 	    selectable_column
@@ -17,9 +17,27 @@ ActiveAdmin.register Client do
     filter :created_at
     filter :updated_at
 	
+	show do
+		attributes_table do
+			row :id
+			row :name
+			row :brand do
+				image_tag attachment_url(client, :brand) if client.brand
+			end
+		end
+		active_admin_comments
+	end
+
   	form do |f|
 	    f.inputs do
 	    	f.input :name
+	    	li do
+		        f.label :brand
+		        f.attachment_field :brand, direct: true
+		    end 
+		    if !f.object.new_record? && client.brand
+		    	li image_tag attachment_url(client, :brand)
+		    end
 	    end
 	    f.actions
 	end

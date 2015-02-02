@@ -2,9 +2,9 @@ class CreatePortfolioProjects < ActiveRecord::Migration
   def change
     create_table :portfolio_projects do |t|
       t.string :name, :null => false
-    	t.string :detail, :null => false
-    	t.string :place, :null => false
-    	t.integer :area, :null => false
+      t.string :detail, :null => false
+      t.string :place, :null => false
+      t.integer :area, :null => false
       t.references :client, index: true
       t.references :type, index: true
       t.string :slug, :null => false
