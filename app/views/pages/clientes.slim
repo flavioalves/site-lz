@@ -21,7 +21,12 @@
 
     .row
       .col-md-15.col-md-offset-1
-        ul.logos        
+        ul.logos  
+          - Client.all.each do |client|
+            li.col-xs-8.col-md-5.col-sm-4
+              a href="#" target="_blank"
+                = image_tag(attachment_url(client, :brand))
+
           li.col-xs-8.col-md-5.col-sm-4
             a href="#" target="_blank"
               = image_tag('clientes/brasal.png')    
