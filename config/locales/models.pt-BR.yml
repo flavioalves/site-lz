@@ -9,6 +9,7 @@ pt-BR:
       portfolio_project: Projeto(s) do Portifólio
       photo: Foto(s)
       project_file: Arquivos
+      team_member: Membro(s) da Equipe
       admin_user: Administrador(es)
       content_block: Bloco(s) de Conteúdo
       contact: Contato(s)
@@ -112,4 +113,14 @@ pt-BR:
         project_file_content_type: Tipo do arquivo
         project_id: Projeto
         created_at: Criado em
-        updated_at: Atualizado em  
+        updated_at: Atualizado em
+      team_member:
+        name: Nome
+        bio: Biografia
+        linkedin: Endereço Linkedin
+        photo: Foto
+        photo_filename: Nome do arquivo
+        photo_size: Tamanho do arquivo
+        photo_content_type: Tipo do arquivo
+        created_at: Criado em
+        updated_at: Atualizado em
