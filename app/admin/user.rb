@@ -2,26 +2,15 @@ ActiveAdmin.register User do
   permit_params :name, :email, :password, :password_confirmation,
                 project_ids: []
 
-  belongs_to :client
-  
-  controller do
-    def update
-      if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
-        params[:user].delete("password")
-        params[:user].delete("password_confirmation")
-      end
-      super
-    end
-  end
+  belongs_to :client, finder: :find_by_slug!
 
   index do
     selectable_column
     id_column
     column :name
     column :email
-    column :current_sign_in_at
-    column :sign_in_count
     column :created_at
+    column :updated_at
     actions
   end
 
@@ -30,7 +19,7 @@ ActiveAdmin.register User do
   filter :current_sign_in_at
   filter :sign_in_count
   filter :created_at
-
+  
   form do |f|
     f.inputs do
       f.input :name
@@ -54,5 +43,15 @@ ActiveAdmin.register User do
       end
     end
     f.actions
+  end
+
+  controller do
+    def update
+      if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+        params[:user].delete("password")
+        params[:user].delete("password_confirmation")
+      end
+      super
+    end
   end
 end
