@@ -10,22 +10,21 @@ class PortfolioProject < ActiveRecord::Base
 	
 	belongs_to :type
 	belongs_to :client
+	has_many :photos, :dependent => :destroy
+	has_many :portfolio_project_tags
+	has_many :tags, through: :portfolio_project_tags
+	
+	accepts_nested_attributes_for :photos, :allow_destroy => true
+	accepts_nested_attributes_for :portfolio_project_tags
 
 	validates_presence_of :type, :name, :detail, :place, :area, :slug,
 						  :cover_image
-
-	has_many :photos, :dependent => :destroy
-	accepts_nested_attributes_for :photos, :allow_destroy => true
-
-	has_many :portfolio_project_tags
-	has_many :tags, through: :portfolio_project_tags
-	accepts_nested_attributes_for :portfolio_project_tags
 
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :detail, :place, :area, 
                 	:type, :type_id, :client, :client_id, 
                 	:photos_attributes, :photos, :tag_ids,
-                  :cover_image, :cover_image_id
+                    :cover_image, :cover_image_id
 
     def should_generate_new_friendly_id?
     	name_changed? || super
