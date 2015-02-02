@@ -15,48 +15,34 @@
         span.name Olá, #{current_user.name}
         a.logout href="#{destroy_user_session_path}" sair
 
-        ul.project-list
-          li 
-            span.number 01
-            .info
-              span.project Nome do Projeto
-              span.description Vivamus sagittis lacus  augue laoreet rutrum
+        - unless current_user.projects.blank?
+          ul.project-list
+            - current_user.projects.each_with_index do |project, index|
+              - if index = 0
+                li.active 
+                  span.number = index + 1
+                  .info
+                    span.project = project.name
+                    span.description = project.description
+              - else
+                li
+                  span.number = index + 1
+                  .info
+                    span.project = project.name
+                    span.description = project.description        
 
-          li.active 
-            span.number 02
-            .info
-              span.project Planejamento de canteiro
-              span.description Vivamus sagittis lacus  augue laoreet rutrum. Vivamus sagittis lacus  augue laoreet rutrum
-
-          li 
-            span.number 03
-            .info
-              span.project Acompanhamento da obra
-              span.description 
-
-      .col-md-10.col-md-offset-1
+      .col-md-10.col-md-offset-1 id='project_files'
         h1.title Arquivos
 
-        ul.files
-          li.file
-            .col-md-5
-              span.date 18 de novembro
-              span.file-name Vulputate Risus Euismod
+        - unless current_user.projects.first.project_files.blank?
+          ul.files
+            - current_user.projects.first.project_files.each do |file|
+              li.file
+                .col-md-5
+                  span.date = file.created_at
+                  span.file-name = file.name
 
-            .col-md-11
-              span.description 
-                'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non porta gravida at eget metus. Maecenas faucibus mollis interdum. 
+                .col-md-11
+                  span.description = file.description 
 
-              a.download href="#" Download
-
-          li.file
-            .col-md-5
-              span.date 18 de novembro
-              span.file-name Vulputate Risus Euismod
-
-            .col-md-11
-              span.description 
-                'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non porta gravida at eget metus. Maecenas faucibus mollis interdum. 
-
-              a.download href="#" Download    
-
+                  = link_to 'Download', attachment_url(file, :project_file), class: 'download'

@@ -15,7 +15,7 @@
 
 #= require slider-home.js
 #= require site-menu.js
-#= require projetos.js
+#= require projetos_portifolio.js
 #= require team-member.js
 #= require hgrid.js
 #= require lightbox.js
