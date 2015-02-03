@@ -10,6 +10,7 @@ pt-BR:
       photo: Foto(s)
       project_file: Arquivos
       team_member: Membro(s) da Equipe
+      cover: Capa(s)
       admin_user: Administrador(es)
       content_block: Bloco(s) de Conteúdo
       contact: Contato(s)
@@ -122,5 +123,15 @@ pt-BR:
         photo_filename: Nome do arquivo
         photo_size: Tamanho do arquivo
         photo_content_type: Tipo do arquivo
+        created_at: Criado em
+        updated_at: Atualizado em
+      cover:
+        obra: Obra
+        description: Descrição
+        client: Cliente  
+        image: Imagem
+        image_filename: Nome do arquivo
+        image_size: Tamanho do arquivo
+        image_content_type: Tipo do arquivo
         created_at: Criado em
         updated_at: Atualizado em
