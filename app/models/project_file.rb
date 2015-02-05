@@ -3,7 +3,8 @@ class ProjectFile < ActiveRecord::Base
 	
 	belongs_to :project
 
-	validates_presence_of :project_file, :name, :description
+	validates_presence_of :project_file, :name
+	validates :description, presence: true, length: { maximum: 255 }	
 	
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :description, :project_file, 

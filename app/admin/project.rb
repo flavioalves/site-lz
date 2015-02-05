@@ -19,7 +19,7 @@ ActiveAdmin.register Project do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :description, as: :text
+      f.input :description, as: :text, input_html: { rows: 5 }
       users = project.client.users
       f.input :users, as: :check_boxes, collection: users unless users.blank?
     end

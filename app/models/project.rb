@@ -10,6 +10,7 @@ class Project < ActiveRecord::Base
 	accepts_nested_attributes_for :user_projects
 
 	validates :name, presence: true
+	validates :description, presence: true, length: { maximum: 255 }
 
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :description, :user_ids

@@ -3,7 +3,7 @@ class CreateTeamMembers < ActiveRecord::Migration
 		create_table :team_members do |t|
 			t.string :name, :null => false
 			t.string :bio, :null => false
-			t.string :linkedin_url
+			t.string :linkedin_url, :null => false
 			
 			t.string :photo_id
 			t.string :photo_filename
