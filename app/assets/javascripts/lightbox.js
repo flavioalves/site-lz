@@ -162,11 +162,13 @@ if($('.projgrid').length > 0){
   });
   
   //Animacoes dos botoes
+  /*
   $('.lightbox a').mouseover(function(){
     $(this).stop().animate({'width':'90px'}, 300);
   }).mouseout(function(){
     $(this).stop().animate({'width':'34px'}, 300); 
   });
+  */
 
 }
 });
