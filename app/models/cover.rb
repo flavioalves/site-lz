@@ -3,7 +3,7 @@ class Cover < ActiveRecord::Base
 	
 	attachment :image
 	
-	validates_presence_of :obra, :description, :image
+	validates_presence_of :obra, :description, :image, :client_id
 
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :obra, :description, :image, :image_id, 

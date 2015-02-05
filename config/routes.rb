@@ -13,11 +13,11 @@ SiteLZ::Application.routes.draw do
   get 'frontend/:template'        => 'frontend#show'
   get 'frontend'                  => 'frontend#index'
 
-  get 'projetos'                  => 'projects#index'
-  get 'projetos/:cliente/:name'   => 'projects#show'
+  get '/clientes/:cliente/projetos/:name'   => 'projects#show'
+  get 'clientes/:name'                      => 'clients#show', as: :clients
+  
   get 'projetos_portifolio'       => 'portfolio_projects#index'
   get 'projetos_portifolio/:name' => 'portfolio_projects#show'
-  get 'clientes/:name'            => 'clients#index', as: :clients
   
   get ':slug'                     => 'pages#show',     as: :page
 end

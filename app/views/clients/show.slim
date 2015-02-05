@@ -6,7 +6,7 @@
       = image_tag('cover/AREA_CLIENTE.png', class: 'rsImg') 
       .container
         .cover-info 
-          .title #{current_user.client.name}    
+          .title #{@client.name}    
       
 .admin
   .container
@@ -15,18 +15,12 @@
         span.name Olá, #{current_user.name}
         a.logout href="#{destroy_user_session_path}" sair
 
-        - unless current_user.projects.blank?
+        - unless @projects.blank?
           ul.project-list
-            - current_user.projects.each_with_index do |project, index|
-              - if index = 0
-                li.active 
-                  span.number = index + 1
-                  .info
-                    span.project = project.name
-                    span.description = project.description
-              - else
-                li
-                  span.number = index + 1
+            - @projects.each_with_index do |project, index|
+              = link_to "/clientes/#{@client.slug}/projetos/#{project.slug}" do 
+                li class=('active' if project.id == @selected_project.id)
+                  span.number = leading_zero(index + 1)
                   .info
                     span.project = project.name
                     span.description = project.description        
@@ -34,12 +28,18 @@
       .col-md-10.col-md-offset-1 id='project_files'
         h1.title Arquivos
 
-        - unless current_user.projects.first.project_files.blank?
-          ul.files
-            - current_user.projects.first.project_files.each do |file|
+        ul.files
+          - if @projects.blank?
+            li.file
+              em Você ainda não possui projetos para visualização.
+          - elsif @selected_project.project_files.blank?
+            li.file
+              em Esse projeto ainda não possui arquivos para visualização.
+          - else     
+            - @selected_project.project_files.each do |file|
               li.file
                 .col-md-5
-                  span.date = file.created_at
+                  span.date = I18n.localize(file.created_at, format: :day_month)
                   span.file-name = file.name
 
                 .col-md-11
