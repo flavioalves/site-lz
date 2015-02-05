@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+	authorize_resource
 	layout "pages"
 
 	def show
@@ -6,7 +7,8 @@ class ProjectsController < ApplicationController
 		
 		@selected_project = Project.friendly.find(params[:name])
 		@client = @selected_project.client
-		
+
+		authorize! :read, @selected_project
 		render 'clients/show'
 	end
 end
