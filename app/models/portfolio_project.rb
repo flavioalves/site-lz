@@ -18,8 +18,7 @@ class PortfolioProject < ActiveRecord::Base
 	accepts_nested_attributes_for :portfolio_project_tags
 
 	validates_presence_of :type, :name, :place, :area, :slug, :cover_image
-	validates :detail, presence: true, length: { maximum: 255 }
-						  
+	validates :detail, presence: true, length: { maximum: 255 }		  
 
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :detail, :place, :area, 
