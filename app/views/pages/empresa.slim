@@ -47,97 +47,18 @@
 
     .row
       ul.time
-        li.team-member
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                = image_tag('socios/joca.png')
-              .back
-                .member
-                  span.name João Carlos Bandeira de Mello Laterza 
-                  //span.position Engenheiro civil
-                  p.bio
-                    'Engenheiro civil pela Escola Politécnica da Universidade de São Paulo. Mais de 30 anos de experiência e atuação na área de gerenciamento e planejamento de obras. Fundador da LZ Planejamento em 2007.
-                  a href="https://www.linkedin.com/pub/jo%C3%A3o-carlos-b-m-laterza/62/92b/802" target="_blank"
-                    span.fa.fa-linkedin                         
-
-        li.team-member 
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                = image_tag('socios/alessio.png')
-              .back
-                .member
-                  span.name Alessio Gallizio
-                  p.bio
-                    'Arquiteto e urbanista pela Universidade de Brasília e mestre pelo Politécnico de Turim (Itália). Na LZ Planejamento desde 2011.
-                  a href="https://www.linkedin.com/pub/alessio-gallizio/61/a76/b38" target="_blank"
-                    span.fa.fa-linkedin                         
-
-        li.team-member            
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                = image_tag('socios/bianca.png') 
-              .back
-                .member
-                  span.name Bianca de Almeida Cardoso
-                  p.bio
-                    'arquiteta e urbanista pelo Centro Universitário de Brasília, cursando MBA na Universidade de São Paulo. Na LZ Planejamento desde 2011.  
-                  a href="https://www.linkedin.com/in/biancaacardoso" target="_blank"
-                    span.fa.fa-linkedin                            
-
-        li.team-member 
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                = image_tag('socios/pamela.png')
-              .back
-                .member
-                  span.name Pâmela Arrais Hodon
-                  p.bio
-                    'arquiteta e urbanista pelo Centro Universitário de Brasília. Na LZ Planejamento desde 2012.
-                  a href="https://www.linkedin.com/pub/p%C3%A2mela-hodon/48/4b/935" target="_blank"
-                    span.fa.fa-linkedin                         
-
-        li.team-member           
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                = image_tag('socios/joao.png')  
-              .back
-                .member
-                  span.name João Augusto Pereira Júnior
-                  p.bio
-                    'arquiteto e urbanista pela Universidade de Brasília, mestrando pelo Politécnico de Turim (Itália). Na LZ Planejamento desde 2012.
-                  a href="https://www.linkedin.com/pub/jo%C3%A3o-augusto-pereira-j%C3%BAnior/93/930/b36" target="_blank"
-                    span.fa.fa-linkedin                         
-                                      
-        li.team-member             
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                = image_tag('socios/felipe.png')
-              .back
-                .member
-                  span.name Felipe Valadares Faim Carmona
-                  p.bio
-                    'engenheiro civil pela Universidade de Brasília. Na LZ Planejamento entre 2011-2012 retornando em 2014.
-                  a href="https://br.linkedin.com/in/felipevfcarmona" target="_blank"
-                    span.fa.fa-linkedin         
-
-        li.team-member             
-          .flip-container ontouchstart="this.classList.toggle('hover');"
-            .flipper
-              .front
-                 = image_tag('socios/lea.png')
-              .back
-                .member
-                  span.name Léa Ferreira Laterza
-                  p.bio
-                    'engenheira agrônoma pela Universidade de Brasília. Pós-graduação em auditoria e controle governamental pelo TCU. Mais de 30 anos de experiência em recursos humanos e auditoria de RH. Na LZ desde 2014.  
-                  a href="https://www.linkedin.com/pub/l%C3%A9a-ferreira-laterza/94/833/843" target="_blank"
-                    span.fa.fa-linkedin                                               
+        - TeamMember.all.each do |team_member|
+          li.team-member
+            .flip-container ontouchstart="this.classList.toggle('hover');"
+              .flipper
+                .front
+                  = image_tag(attachment_url(team_member, :photo))
+                .back
+                  .member
+                    span.name = team_member.name 
+                    p.bio = team_member.bio
+                    a href="#{team_member.linkedin_url}" target="_blank"
+                      span.fa.fa-linkedin
 
 
 

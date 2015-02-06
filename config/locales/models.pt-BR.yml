@@ -8,6 +8,9 @@ pt-BR:
       type: Tipo(s) de Projeto
       portfolio_project: Projeto(s) do Portifólio
       photo: Foto(s)
+      project_file: Arquivos
+      team_member: Membro(s) da Equipe
+      cover: Capa(s)
       admin_user: Administrador(es)
       content_block: Bloco(s) de Conteúdo
       contact: Contato(s)
@@ -59,18 +62,22 @@ pt-BR:
         client_id: Cliente
       client:
         name: Nome  
+        brand: Marca
         users: Usuários
         projects: Projetos
         portfolio_projects: Projetos do Portifólio
         created_at: Criado em
         updated_at: Atualizado em
+        slug: URL amigável
       project:
         name: Nome 
+        description: Descrição
         client: Cliente
         client_id: Cliente
         users: Usuários
         created_at: Criado em
         updated_at: Atualizado em
+        slug: URL amigável
       type:
         name: Nome
         created_at: Criado em
@@ -83,10 +90,48 @@ pt-BR:
         tags: Categorias
         type_id: Tipo
         type: Tipo
+        cover_image: Imagem de Capa
         client_id: Cliente
         client: Cliente
         created_at: Criado em
         updated_at: Atualizado em
+        cover_image_filename: Nome do arquivo
+        cover_image_size: Tamanho do arquivo
+        cover_image_content_type: Tipo do arquivo
       photo:
+        image: Foto
+        image_filename: Nome do arquivo
+        image_size: Tamanho do arquivo
+        image_content_type: Tipo do arquivo
+        created_at: Criado em
+        updated_at: Atualizado em
+      project_file:
+        name: Nome
+        description: Descrição
+        project_file: Arquivo
+        project_file_filename: Nome do arquivo
+        project_file_size: Tamanho do arquivo
+        project_file_content_type: Tipo do arquivo
+        project_id: Projeto
+        created_at: Criado em
+        updated_at: Atualizado em
+      team_member:
+        name: Nome
+        bio: Biografia
+        linkedin: Endereço Linkedin
+        photo: Foto
+        photo_filename: Nome do arquivo
+        photo_size: Tamanho do arquivo
+        photo_content_type: Tipo do arquivo
+        created_at: Criado em
+        updated_at: Atualizado em
+      cover:
+        obra: Obra
+        description: Descrição
+        client: Cliente  
+        image: Imagem
+        image_filename: Nome do arquivo
+        image_size: Tamanho do arquivo
+        image_content_type: Tipo do arquivo
         created_at: Criado em
         updated_at: Atualizado em

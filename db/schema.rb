@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130003445) do
+ActiveRecord::Schema.define(version: 20150203020605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,15 +53,38 @@ ActiveRecord::Schema.define(version: 20150130003445) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug",               null: false
+    t.string   "brand_id"
+    t.string   "brand_filename"
+    t.integer  "brand_size"
+    t.string   "brand_content_type"
   end
 
   add_index "clients", ["name"], name: "index_clients_on_name", unique: true, using: :btree
+  add_index "clients", ["slug"], name: "index_clients_on_slug", unique: true, using: :btree
+
+  create_table "covers", force: true do |t|
+    t.string   "obra",               null: false
+    t.string   "description",        null: false
+    t.integer  "client_id"
+    t.string   "image_id"
+    t.string   "image_filename"
+    t.integer  "image_size"
+    t.string   "image_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "covers", ["client_id"], name: "index_covers_on_client_id", using: :btree
 
   create_table "photos", force: true do |t|
     t.string   "image_id"
     t.integer  "portfolio_project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_filename"
+    t.integer  "image_size"
+    t.string   "image_content_type"
   end
 
   add_index "photos", ["portfolio_project_id"], name: "index_photos_on_portfolio_project_id", using: :btree
@@ -77,20 +100,38 @@ ActiveRecord::Schema.define(version: 20150130003445) do
   add_index "portfolio_project_tags", ["tag_id"], name: "index_portfolio_project_tags_on_tag_id", using: :btree
 
   create_table "portfolio_projects", force: true do |t|
-    t.string   "name",       null: false
-    t.string   "detail",     null: false
-    t.string   "place",      null: false
-    t.integer  "area",       null: false
+    t.string   "name",                     null: false
+    t.string   "detail",                   null: false
+    t.string   "place",                    null: false
+    t.integer  "area",                     null: false
     t.integer  "client_id"
     t.integer  "type_id"
-    t.string   "slug",       null: false
+    t.string   "slug",                     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_image_id"
+    t.string   "cover_image_filename"
+    t.integer  "cover_image_size"
+    t.string   "cover_image_content_type"
   end
 
   add_index "portfolio_projects", ["client_id"], name: "index_portfolio_projects_on_client_id", using: :btree
   add_index "portfolio_projects", ["slug"], name: "index_portfolio_projects_on_slug", unique: true, using: :btree
   add_index "portfolio_projects", ["type_id"], name: "index_portfolio_projects_on_type_id", using: :btree
+
+  create_table "project_files", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "project_id"
+    t.string   "project_file_id"
+    t.string   "project_file_filename"
+    t.integer  "project_file_size"
+    t.string   "project_file_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_files", ["project_id"], name: "index_project_files_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -98,13 +139,27 @@ ActiveRecord::Schema.define(version: 20150130003445) do
     t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug",        null: false
   end
 
   add_index "projects", ["client_id"], name: "index_projects_on_client_id", using: :btree
+  add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true, using: :btree
 
   create_table "tags", force: true do |t|
     t.string   "name",       null: false
     t.string   "class_name", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "team_members", force: true do |t|
+    t.string   "name",               null: false
+    t.string   "bio",                null: false
+    t.string   "linkedin_url"
+    t.string   "photo_id"
+    t.string   "photo_filename"
+    t.integer  "photo_size"
+    t.string   "photo_content_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

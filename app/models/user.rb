@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   belongs_to :client
   has_many :user_projects
   has_many :projects, through: :user_projects
+  
   accepts_nested_attributes_for :user_projects
 
   validates :name, :email, presence: true
