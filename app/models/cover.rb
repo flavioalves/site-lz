@@ -3,8 +3,9 @@ class Cover < ActiveRecord::Base
 	
 	attachment :image
 	
-	validates_presence_of :obra, :description, :image, :client_id
-
+	validates_presence_of :obra, :image, :client
+	validates :description, presence: true, length: { maximum: 255 }
+	
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :obra, :description, :image, :image_id, 
 					:client, :client_id

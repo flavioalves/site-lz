@@ -39,7 +39,7 @@ ActiveAdmin.register ProjectFile do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :description, as: :text
+      f.input :description, as: :text, input_html: { rows: 5 }
       unless f.object.new_record?
         li link_to project_file.project_file_filename, attachment_url(project_file, :project_file)
       end 

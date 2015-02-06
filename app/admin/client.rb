@@ -1,16 +1,18 @@
 ActiveAdmin.register Client do
-	permit_params :name, :brand
+	permit_params :name, :brand, :url
 
 	index do
 	    selectable_column
 	    id_column
 	    column :name
+	    column :url
 	    column :created_at
 	    column :updated_at
 	    actions
   	end
 
 	filter :name
+	filter :url
     filter :portfolio_projects
     filter :projects
     filter :users
@@ -21,6 +23,7 @@ ActiveAdmin.register Client do
 		attributes_table do
 			row :id
 			row :name
+			row :url
 			row :brand do
 				image_tag attachment_url(client, :brand) if client.brand
 			end
@@ -31,6 +34,7 @@ ActiveAdmin.register Client do
   	form do |f|
 	    f.inputs do
 	    	f.input :name
+	    	f.input :url
 	    	li do
 		        f.label :brand
 		        f.attachment_field :brand, direct: true

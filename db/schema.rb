@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203020605) do
+ActiveRecord::Schema.define(version: 20150205224342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150203020605) do
     t.string   "brand_filename"
     t.integer  "brand_size"
     t.string   "brand_content_type"
+    t.string   "url",                null: false
   end
 
   add_index "clients", ["name"], name: "index_clients_on_name", unique: true, using: :btree
@@ -155,7 +156,7 @@ ActiveRecord::Schema.define(version: 20150203020605) do
   create_table "team_members", force: true do |t|
     t.string   "name",               null: false
     t.string   "bio",                null: false
-    t.string   "linkedin_url"
+    t.string   "linkedin_url",       null: false
     t.string   "photo_id"
     t.string   "photo_filename"
     t.integer  "photo_size"

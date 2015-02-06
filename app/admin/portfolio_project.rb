@@ -48,7 +48,7 @@ ActiveAdmin.register PortfolioProject do
     f.inputs do
       f.input :type
       f.input :name
-      f.input :detail, as: :text
+      f.input :detail, as: :text, input_html: { rows: 5 }
       f.input :place
       f.input :area
       f.input :tags, as: :check_boxes, collection: Tag.all

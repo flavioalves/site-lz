@@ -61,7 +61,8 @@ pt-BR:
         projects: Projetos
         client_id: Cliente
       client:
-        name: Nome  
+        name: Nome
+        url: Link  
         brand: Marca
         users: Usuários
         projects: Projetos

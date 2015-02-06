@@ -33,7 +33,7 @@ ActiveAdmin.register Cover do
   form do |f|
     f.inputs do
       f.input :obra
-      f.input :description, as: :text
+      f.input :description, as: :text, input_html: { rows: 5 }
       f.input :client
       li do
           f.label :image

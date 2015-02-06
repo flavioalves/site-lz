@@ -35,7 +35,7 @@ ActiveAdmin.register TeamMember do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :bio, as: :text
+      f.input :bio, as: :text, input_html: { rows: 5 }
       f.input :linkedin_url
       li do
         f.label :photo
