@@ -3,6 +3,10 @@
     display: none !important
 
   .form-select-projects
+    display: none
+    @media (min-width: $default) 
+      display: block
+      
     select
       float: left
       display: block
@@ -56,13 +60,15 @@
       span
         text-transform: uppercase
         background: url('product-icons-black.png') no-repeat
-        width: 33%
         height: 30px
         display: block
         line-height: 30px
         padding-left: 35px !important
-
         margin-bottom: 10px  
+
+        display: inline-block
+        width: 32%
+
         @media (min-width: $tablets) 
           margin-bottom: 0px
 

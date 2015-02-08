@@ -1,14 +1,16 @@
 - content_for :body_class, 'l-login'
-= image_tag('login-cover.png', class: 'bg')
 
-.login-form
-  h1 Área do cliente
-  h2 Espaço exclusivo para clientes da <b>LZ planejamento</b>
-  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {autocomplete: 'off'}) do |f|
-    = f.email_field :email, placeholder: "E-mail"
-    = f.password_field :password, placeholder: "Senha"  
-    = f.submit "Enviar", class: 'btn'
-- if notice
-  p.notice = notice
-- if alert
-  p.alert = alert
+//= image_tag('login-cover.png', class: 'bg')
+.page-container
+
+  .login-form
+    h1 Área do cliente
+    h2 Espaço exclusivo para clientes da <b>LZ planejamento</b>
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: {autocomplete: 'off'}) do |f|
+      = f.email_field :email, placeholder: "E-mail"
+      = f.password_field :password, placeholder: "Senha"  
+      = f.submit "Enviar", class: 'btn'
+  - if notice
+    p.notice = notice
+  - if alert
+    p.alert = alert

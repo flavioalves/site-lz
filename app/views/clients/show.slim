@@ -4,9 +4,12 @@
   .royalSlider
     .item
       = image_tag('cover/AREA_CLIENTE.png', class: 'rsImg') 
-      .container
-        .cover-info 
-          .title #{@client.name}    
+      figure.rsCaption       
+        .container
+          .cover-content
+            .cover-info 
+              .title #{@client.name}    
+            .nav-down   
       
 .admin
   .container
@@ -45,4 +48,4 @@
                 .col-md-11
                   span.description = file.description 
 
-                  = link_to 'Download', attachment_url(file, :project_file), class: 'download'
+                  = link_to 'Download', attachment_url(file, :project_file), class: 'download', target: '_blank'

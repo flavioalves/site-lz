@@ -2,8 +2,10 @@
 
   height: 320px
   width: 100%
-  background: url("preloader-white.gif") center center no-repeat
+  background: url("preloader-white.gif") center center no-repeat #e7e7e7
   background-size: 45px 45px
+  background-color: #e7e7e7 
+  //background-color: #336666
 
   .item
     .info
@@ -25,14 +27,17 @@
       @media (min-width: $large-display) 
         margin-top: -340px
 
+      text-shadow: 1px 1px 0px black
+
       .obra
         font-size: 32px
         text-transform: uppercase
-        font-weight: 300
+        font-weight: bold
+        line-height: 32px
 
       .cliente
         font-size: 26px
-        font-weight: 300
+        font-weight: bold
         text-transform: uppercase
 
       .descricao
