@@ -30,9 +30,4 @@ class PortfolioProject < ActiveRecord::Base
     def should_generate_new_friendly_id?
     	name_changed? || super
   	end
-
-  	def style_class
-  		return 'i1x2' if self.number_of_columns == 2
-  		return 'i1x1'
-  	end
 end

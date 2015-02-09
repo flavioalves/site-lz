@@ -19,7 +19,7 @@ ActiveAdmin.register Cover do
       row :obra
       row :description
       row :image do
-        image_tag attachment_url(cover, :image, :fill, 375, 375) if cover.image
+        image_tag attachment_url(cover, :image) if cover.image
       end
       row :image_filename
       row :image_size
@@ -40,7 +40,7 @@ ActiveAdmin.register Cover do
           f.attachment_field :image, direct: true
       end 
       if !f.object.new_record? && cover.image
-        li image_tag attachment_url(cover, :image, :fill, 375, 375)
+        li image_tag attachment_url(cover, :image)
       end
     end
     f.actions

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150209165851) do
+ActiveRecord::Schema.define(version: 20150209172822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20150209165851) do
     t.string   "image_filename"
     t.integer  "image_size"
     t.string   "image_content_type"
+    t.integer  "number_of_columns"
   end
 
   add_index "photos", ["portfolio_project_id"], name: "index_photos_on_portfolio_project_id", using: :btree

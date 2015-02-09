@@ -4,7 +4,8 @@ class Photo < ActiveRecord::Base
 	belongs_to :portfolio_project
 
 	validates :image, presence: true
+	validates :number_of_columns, presence: true
 
 	# Setup accessible (or protected) attributes for your model
-	attr_accessible :image, :portfolio_project_id, :image_id
+	attr_accessible :image, :portfolio_project_id, :image_id, :number_of_columns
 end

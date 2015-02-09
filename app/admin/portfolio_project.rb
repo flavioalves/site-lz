@@ -33,8 +33,9 @@ ActiveAdmin.register PortfolioProject do
       row :client
       row :type
       row :cover_image do
-        image_tag attachment_url(portfolio_project, :cover_image, :fill, 375, 375)
+        image_tag attachment_url(portfolio_project, :cover_image)
       end
+      row :number_of_columns
       row :cover_image_filename
       row :cover_image_size
       row :cover_image_content_type
@@ -55,13 +56,12 @@ ActiveAdmin.register PortfolioProject do
       
       options = [["1x1", 1],["1x2", 2]]
       f.input :number_of_columns, :collection => options, :as => :radio 
-
       li do
         f.label :cover_image
         f.attachment_field :cover_image, direct: true
       end 
       if !f.object.new_record? && portfolio_project.cover_image
-        li image_tag attachment_url(portfolio_project, :cover_image, :fill, 375, 375)
+        li image_tag attachment_url(portfolio_project, :cover_image)
       end 
     end
     f.actions
