@@ -54,7 +54,7 @@ ActiveAdmin.register PortfolioProject do
       f.input :area
       f.input :tags, as: :check_boxes, collection: Tag.all
       
-      options = [["1x1", 1],["1x2", 2]]
+      options = [["1x1 (proporção esperada 478x478)", 1],["1x2 (proporção esperada 921x478)", 2]]
       f.input :number_of_columns, :collection => options, :as => :radio 
       li do
         f.label :cover_image

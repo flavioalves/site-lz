@@ -32,7 +32,7 @@ ActiveAdmin.register Photo do
 
   	form do |f|
     	f.inputs do
-    		options = [["1x1", 1],["1x2", 2]]
+    		options = [["1x1 (proporção esperada 478x478)", 1],["1x2 (proporção esperada 921x478)", 2]]
 	        f.input :number_of_columns, :collection => options, :as => :radio 
 
 		    unless f.object.new_record?
