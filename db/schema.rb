@@ -156,7 +156,7 @@ ActiveRecord::Schema.define(version: 20150205224342) do
   create_table "team_members", force: true do |t|
     t.string   "name",               null: false
     t.string   "bio",                null: false
-    t.string   "linkedin_url",       null: false
+    t.string   "linkedin_url"
     t.string   "photo_id"
     t.string   "photo_filename"
     t.integer  "photo_size"

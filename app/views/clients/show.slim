@@ -4,9 +4,12 @@
   .royalSlider
     .item
       = image_tag('cover/AREA_CLIENTE.png', class: 'rsImg') 
-      .container
-        .cover-info 
-          .title #{@client.name}    
+      figure.rsCaption       
+        .container
+          .cover-content
+            .cover-info 
+              .title #{@client.name}    
+            .nav-down   
       
 .admin
   .container

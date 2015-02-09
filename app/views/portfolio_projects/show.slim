@@ -9,8 +9,12 @@
           .cover-content
             .cover-info 
               .title = @portfolio_project.name
-              .subtitle 
-            .nav-down       
+              .client = @portfolio_project.client.name
+            .nav-back
+              a href="#" onclick="window.history.back();return false;"
+                span.fa.fa-angle-left
+                'voltar    
+
 
 .projetos
   .container
@@ -37,7 +41,7 @@
             span.name Área
             span.info = "#{ @portfolio_project.area }m²"
 
-    .row style="padding: 60px 0px"
+    .row style="padding: 40px 0px 60px 0px"
       #grid.projgrid
         - @portfolio_project.photos.each do |photo|
           article.item.i1x1 data-block="1" 

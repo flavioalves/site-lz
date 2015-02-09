@@ -2,8 +2,10 @@
 
   height: 320px
   width: 100%
-  background: url("preloader-white.gif") center center no-repeat
+  background: url("preloader-white.gif") center center no-repeat #e7e7e7
   background-size: 45px 45px
+  background-color: #e7e7e7 
+  //background-color: #336666
 
   .item
     .info
@@ -11,9 +13,10 @@
       //bottom: 150px      
       z-index: 10
       color: white
-      text-align: left
+      text-align: right
       margin-right: 10px
       margin-top: -150px
+      left: -10px
 
       @media (min-width: $tablets) 
         margin-top: -200px
@@ -22,21 +25,25 @@
         margin-top: -250px
 
       @media (min-width: $large-display) 
-        margin-top: -300px
+        margin-top: -340px
+
+      text-shadow: 1px 1px 0px black
 
       .obra
         font-size: 32px
         text-transform: uppercase
-        font-weight: 300
+        font-weight: bold
+        line-height: 32px
 
       .cliente
         font-size: 26px
-        font-weight: 300
+        font-weight: bold
+        text-transform: uppercase
 
       .descricao
-        font-size: 14px
+        font-size: 16px
         width: 300px
-        float: left
+        float: right
 
 .info-content  
   p 

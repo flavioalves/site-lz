@@ -209,11 +209,18 @@ jQuery.fn.hGrid = function(options){
         } else if(jQuery(this).attr('data-block') == '2'){ //Caso o item tenha 2 blocos de largura 
           //Calcula a proporcao da largura do item
           var wItem1x2 = (options.boxWidth * 2 + ((diff / colum) * 2)) + options.boxMargin; 
+          var hItem1x2 = options.boxWidth * hRation;
           numberItens += 2; //Adiciona a variavel de numero de itens +2 ( 2 colunas )
 
+          // verifica se é mobile - apenas uma coluna
+          if(colum == 1){
+            wItem1x2 = options.boxWidth + (diff / colum);
+            hItem1x2 = wItem1x2 / 2
+          } 
+          
           jQuery(this).css({ //Atribui margem e largura no item para ele ficar proporcionalmente igual
             'width':wItem1x2,
-            'height':options.boxWidth * hRation,
+            'height':hItem1x2,
             'margin-right':options.boxMargin,
             'margin-bottom':options.boxMargin
           });
