@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205224342) do
+ActiveRecord::Schema.define(version: 20150209165851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20150205224342) do
     t.string   "cover_image_filename"
     t.integer  "cover_image_size"
     t.string   "cover_image_content_type"
+    t.integer  "number_of_columns"
   end
 
   add_index "portfolio_projects", ["client_id"], name: "index_portfolio_projects_on_client_id", using: :btree
@@ -156,7 +157,7 @@ ActiveRecord::Schema.define(version: 20150205224342) do
   create_table "team_members", force: true do |t|
     t.string   "name",               null: false
     t.string   "bio",                null: false
-    t.string   "linkedin_url"
+    t.string   "linkedin_url",       null: false
     t.string   "photo_id"
     t.string   "photo_filename"
     t.integer  "photo_size"

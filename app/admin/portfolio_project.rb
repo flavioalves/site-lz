@@ -1,5 +1,5 @@
 ActiveAdmin.register PortfolioProject do
-  permit_params :name, :detail, :place, :area,
+  permit_params :name, :detail, :place, :area, :number_of_columns,
                 :client, :type, :client_id, :type_id,
                 :cover_image, :photos_attributes, tag_ids: []
   belongs_to :client, finder: :find_by_slug!
@@ -52,6 +52,10 @@ ActiveAdmin.register PortfolioProject do
       f.input :place
       f.input :area
       f.input :tags, as: :check_boxes, collection: Tag.all
+      
+      options = [["1x1", 1],["1x2", 2]]
+      f.input :number_of_columns, :collection => options, :as => :radio 
+
       li do
         f.label :cover_image
         f.attachment_field :cover_image, direct: true
