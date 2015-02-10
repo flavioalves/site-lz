@@ -36,12 +36,13 @@ ActiveAdmin.register Cover do
       f.input :description, as: :text, input_html: { rows: 5 }
       f.input :client
       li do
+          para "Faça upload de imagens com o tamanho: 1280 × 764 (px)"
           f.label :image
           f.attachment_field :image, direct: true
       end 
       if !f.object.new_record? && cover.image
         li image_tag attachment_url(cover, :image)
-      end
+      end      
     end
     f.actions
   end

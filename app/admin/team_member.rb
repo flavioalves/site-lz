@@ -38,6 +38,7 @@ ActiveAdmin.register TeamMember do
       f.input :bio, as: :text, input_html: { rows: 5 }
       f.input :linkedin_url
       li do
+        para "Faça upload de imagens com o tamanho: 300 x 300"
         f.label :photo
         f.attachment_field :photo, direct: true
       end 
