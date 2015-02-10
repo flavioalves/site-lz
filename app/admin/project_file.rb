@@ -3,6 +3,7 @@ ActiveAdmin.register ProjectFile do
                 :project_id, :client_id
   belongs_to :project, finder: :find_by_slug!
 
+  # fixing a third level breadcrumb: customizing a new one.
   breadcrumb do
     my_breadcrumb = []
     

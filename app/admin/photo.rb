@@ -2,6 +2,7 @@ ActiveAdmin.register Photo do
 	permit_params :image, :portfolio_project_id, :client_id, :number_of_columns
 	belongs_to :portfolio_project, finder: :find_by_slug!
   
+  	# fixing a third level breadcrumb: customizing a new one.
 	breadcrumb do
 		my_breadcrumb = []
 		
