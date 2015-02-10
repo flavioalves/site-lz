@@ -3,6 +3,36 @@ ActiveAdmin.register ProjectFile do
                 :project_id, :client_id
   belongs_to :project, finder: :find_by_slug!
 
+  breadcrumb do
+    my_breadcrumb = []
+    
+    my_url = "/admin" 
+    my_breadcrumb << link_to('admin', my_url)
+    
+    my_url << "/clients"
+    my_breadcrumb << link_to('Cliente(s)', my_url)
+    
+    my_client = project.client
+    my_url << "/#{my_client.slug}"
+    my_breadcrumb << link_to(my_client.name, my_url)
+    
+    my_url << "/projects"
+    my_breadcrumb << link_to('Projeto(s)', my_url)
+    
+    my_url << "/#{project.slug}"
+    my_breadcrumb << link_to(project.name, my_url)
+    
+    if params[:action] != 'index'
+      my_url = "/admin/projects/#{project.slug}/project_files"
+      my_breadcrumb << link_to('Arquivo(s)', my_url)
+      if params[:action] == 'edit'
+        my_url << "/#{project_file.id}"
+        my_breadcrumb << link_to(project_file.name, my_url)
+      end
+    end
+    my_breadcrumb
+  end
+
   index do
     selectable_column
     id_column
