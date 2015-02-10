@@ -94,6 +94,7 @@ pt-BR:
         cover_image: Imagem de Capa
         client_id: Cliente
         client: Cliente
+        number_of_columns: Apresentação Capa
         created_at: Criado em
         updated_at: Atualizado em
         cover_image_filename: Nome do arquivo
@@ -101,6 +102,7 @@ pt-BR:
         cover_image_content_type: Tipo do arquivo
       photo:
         image: Foto
+        number_of_columns: Apresentação Foto
         image_filename: Nome do arquivo
         image_size: Tamanho do arquivo
         image_content_type: Tipo do arquivo

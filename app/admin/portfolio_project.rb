@@ -1,5 +1,5 @@
 ActiveAdmin.register PortfolioProject do
-  permit_params :name, :detail, :place, :area,
+  permit_params :name, :detail, :place, :area, :number_of_columns,
                 :client, :type, :client_id, :type_id,
                 :cover_image, :photos_attributes, tag_ids: []
   belongs_to :client, finder: :find_by_slug!
@@ -33,8 +33,9 @@ ActiveAdmin.register PortfolioProject do
       row :client
       row :type
       row :cover_image do
-        image_tag attachment_url(portfolio_project, :cover_image, :fill, 375, 375)
+        image_tag attachment_url(portfolio_project, :cover_image)
       end
+      row :number_of_columns
       row :cover_image_filename
       row :cover_image_size
       row :cover_image_content_type
@@ -52,12 +53,15 @@ ActiveAdmin.register PortfolioProject do
       f.input :place
       f.input :area
       f.input :tags, as: :check_boxes, collection: Tag.all
+      
+      options = [["1x1 (proporção esperada 478x478)", 1],["1x2 (proporção esperada 921x478)", 2]]
+      f.input :number_of_columns, :collection => options, :as => :radio 
       li do
         f.label :cover_image
         f.attachment_field :cover_image, direct: true
       end 
       if !f.object.new_record? && portfolio_project.cover_image
-        li image_tag attachment_url(portfolio_project, :cover_image, :fill, 375, 375)
+        li image_tag attachment_url(portfolio_project, :cover_image)
       end 
     end
     f.actions

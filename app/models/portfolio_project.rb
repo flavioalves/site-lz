@@ -17,16 +17,17 @@ class PortfolioProject < ActiveRecord::Base
 	accepts_nested_attributes_for :photos, :allow_destroy => true
 	accepts_nested_attributes_for :portfolio_project_tags
 
-	validates_presence_of :type, :name, :place, :area, :slug, :cover_image
+	validates_presence_of :type, :name, :place, :area, :slug, :cover_image,
+						  :number_of_columns
 	validates :detail, presence: true, length: { maximum: 255 }		  
 
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :detail, :place, :area, 
                 	:type, :type_id, :client, :client_id, 
                 	:photos_attributes, :photos, :tag_ids,
-                    :cover_image, :cover_image_id
+                    :cover_image, :cover_image_id, :number_of_columns
 
     def should_generate_new_friendly_id?
     	name_changed? || super
-  	end               
+  	end
 end
