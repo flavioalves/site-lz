@@ -36,6 +36,7 @@ ActiveAdmin.register Client do
 	    	f.input :name
 	    	f.input :url
 	    	li do
+	    			para "Faça upload de imagens com até tamanho: 250 x 250"
 		        f.label :brand
 		        f.attachment_field :brand, direct: true
 		    end 
