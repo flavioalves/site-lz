@@ -5,7 +5,11 @@ $(document).ready(function(){
       counters    : true,
       offCanvas : {
         position: "right"
+      },
+      onClick : {
+        close: true
       }
+
     },{
       offCanvas: {
         pageNodetype: "section.page"
@@ -17,16 +21,20 @@ $(document).ready(function(){
       counters    : true,
       offCanvas : {
         position: "right"
-      }
+      },
+      onClick : {
+        close: true
+      }      
     },{
       offCanvas: {
         pageNodetype: "section.page"
       }
   });
 
+  var headerOffset = ($(".l-login") && $(".l-login").length > 0) ? 10 : 200;
   // controll header
   $("#header").headroom({
-    offset : 200,
+    offset : headerOffset,
     tolerance : 5,
   });
   

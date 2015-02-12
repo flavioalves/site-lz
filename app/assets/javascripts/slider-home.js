@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  
   var height = $(window).height();
   var width = $(window).width();
   $(".slider-container").height(height);
@@ -19,7 +19,7 @@ $(document).ready(function(){
         pauseOnHover: true
       }
   });  
-
+  
   $('.nav-down').click(function(){
     $('body,html').animate({
       scrollTop: height

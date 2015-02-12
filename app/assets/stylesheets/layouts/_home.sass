@@ -2,27 +2,25 @@
 
   height: 320px
   width: 100%
-  background: url("preloader-white.gif") center center no-repeat #e7e7e7
+  background: url("preloader-white.gif") center center no-repeat black
   background-size: 45px 45px
-  background-color: #e7e7e7 
+  background-color: black 
   //background-color: #336666
 
   .item
     .info
-      position: relative
-      //bottom: 150px      
+      position: relative   
       z-index: 10
       color: white
       text-align: right
       margin-right: 10px
-      margin-top: -175px
       left: -10px
-
+      margin-top: -120px
       @media (min-width: $tablets) 
-        margin-top: -150px
+        margin-top: -130px
 
       @media (min-width: $default) 
-        margin-top: -170px
+        margin-top: -140px
 
       @media (min-width: $large-display) 
         margin-top: -230px
@@ -117,7 +115,7 @@
         float: left        
         width: 30px
         height: 30px
-
+        +fade-on-hover
         @media (min-width: $tablets)
           width: 60px
           height: 60px
@@ -148,8 +146,11 @@
           text-transform: uppercase
           font-size: 18px
           font-weight: normal
-          color: #f0f0f0
-        p
+          a 
+            color: #f0f0f0
+            text-decoration: none
+            +fade-on-hover
+
       
 
 

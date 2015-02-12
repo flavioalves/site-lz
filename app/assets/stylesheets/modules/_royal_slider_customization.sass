@@ -27,12 +27,13 @@
 
 .rsSlide 
   min-height: 300px
-  img.rsImg
-    top: 0
-    left: 0                 
-    width: 100%  !important      
-    min-width: 1024px      
-    height: auto  !important    
+  @media (min-width: $large-display)
+    img.rsImg
+      top: 0
+      left: 0                 
+      width: 100%  !important      
+      min-width: 1024px      
+      height: auto  !important    
 
 .rsOverflow
   cursor: default !important
