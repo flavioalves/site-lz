@@ -2,6 +2,7 @@ class PortfolioProject < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name, use: [:slugged]
 
+  	attachment :cover
   	attachment :cover_image
 
 	scope :client, -> (client_id) { where client_id: client_id }
@@ -18,14 +19,15 @@ class PortfolioProject < ActiveRecord::Base
 	accepts_nested_attributes_for :portfolio_project_tags
 
 	validates_presence_of :type, :name, :place, :area, :slug, :cover_image,
-						  :number_of_columns
+						  :number_of_columns, :cover
 	validates :detail, presence: true, length: { maximum: 255 }		  
 
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :detail, :place, :area, 
                 	:type, :type_id, :client, :client_id, 
                 	:photos_attributes, :photos, :tag_ids,
-                    :cover_image, :cover_image_id, :number_of_columns
+                    :cover_image, :cover_image_id, :number_of_columns,
+                    :cover, :cover_id, 
 
     def should_generate_new_friendly_id?
     	name_changed? || super

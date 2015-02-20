@@ -91,15 +91,19 @@ pt-BR:
         tags: Categorias
         type_id: Tipo
         type: Tipo
-        cover_image: Imagem de Capa
         client_id: Cliente
         client: Cliente
-        number_of_columns: Apresentação Capa
+        number_of_columns: Apresentação
         created_at: Criado em
         updated_at: Atualizado em
-        cover_image_filename: Nome do arquivo
-        cover_image_size: Tamanho do arquivo
-        cover_image_content_type: Tipo do arquivo
+        cover_image: Miniatura
+        cover_image_filename: Nome da Miniatura
+        cover_image_size: Tamanho da Miniatura
+        cover_image_content_type: Tipo da Miniatura
+        cover: Imagem de Capa
+        cover_filename: Nome do arquivo
+        cover_size: Tamanho do arquivo
+        cover_content_type: Tipo do arquivo
       photo:
         image: Foto
         number_of_columns: Apresentação Foto
