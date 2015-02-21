@@ -1,4 +1,5 @@
 class Photo < ActiveRecord::Base
+	default_scope { order('created_at ASC') }
 	attachment :image
 	
 	belongs_to :portfolio_project

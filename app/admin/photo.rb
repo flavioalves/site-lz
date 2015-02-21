@@ -36,8 +36,12 @@ ActiveAdmin.register Photo do
 	index as: :grid, default: true, columns: 2 do |photo|
 	  div for: photo do
 	  	resource_selection_cell photo
-	    span link_to image_tag(attachment_url(photo, :image)),
-	    	admin_portfolio_project_photo_path(photo.portfolio_project, photo)
+	  	if photo.number_of_columns == 1
+	  		photo_image = image_tag(attachment_url(photo, :image, :fill, 239, 239))
+	  	else
+	  		photo_image = image_tag(attachment_url(photo, :image, :fill, 478, 239))
+	  	end	
+	    span link_to photo_image, admin_portfolio_project_photo_path(photo.portfolio_project, photo)
 	  end
 	end
 
