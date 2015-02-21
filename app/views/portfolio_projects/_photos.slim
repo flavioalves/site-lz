@@ -1,0 +1,18 @@
+- if !@portfolio_projects.blank?
+  - @portfolio_projects.each do |project|
+    - if project.number_of_columns == 1
+      article.item data-block='1' class='i1x1'
+        a href="/projetos_portifolio/#{project.slug}"
+          .info
+            span.name = project.name
+            span.resume = project.detail
+          .img-overlay
+          = image_tag attachment_url(project, :cover_image) if project.cover_image
+    - else
+      article.item data-block='2' class='i1x2'
+        a href="/projetos_portifolio/#{project.slug}"
+          .info
+            span.name = project.name
+            span.resume = project.detail
+          .img-overlay
+          = image_tag attachment_url(project, :cover_image) if project.cover_image

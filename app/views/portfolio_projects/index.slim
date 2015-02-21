@@ -20,28 +20,12 @@
         p style="margin-top: 60px;" Desde 2007 trabalhamos apoiando o desenvolvimento dos mais diversos empreendimentos. Temos muito orgulho do portfólio que construímos.
 
         .form-select-projects
-          = form_tag projetos_portifolio_path, method: :get, remote: true do
-            = select_tag :client, options_from_collection_for_select(Client.all, 'id', 'name', params[:client]), class: 'select-clients', prompt: 'CLIENTES', :onchange => "this.form.submit()"
-            = select_tag :tag, options_from_collection_for_select(Tag.all, 'id', 'name', params[:tag]), class: 'select-categories', prompt: 'CATEGORIAS', :onchange => "this.form.submit()"
-            = select_tag :type, options_from_collection_for_select(Type.all, 'id', 'name', params[:type]), class: 'select-types', prompt: 'TIPOS', :onchange => "this.form.submit()"
+          = form_tag projetos_portifolio_path, method: :get do
+            = select_tag :client, options_from_collection_for_select(Client.all, 'id', 'name', params[:client]), class: 'select-clients', prompt: 'CLIENTES', :onchange => "search_portfolio_projects()"
+            = select_tag :tag, options_from_collection_for_select(Tag.all, 'id', 'name', params[:tag]), class: 'select-categories', prompt: 'CATEGORIAS', :onchange => "search_portfolio_projects()"
+            = select_tag :type, options_from_collection_for_select(Type.all, 'id', 'name', params[:type]), class: 'select-types', prompt: 'TIPOS', :onchange => "search_portfolio_projects()"
 
     .row style="padding: 60px 0px"
       #grid
-        - @portfolio_projects.each do |project|
-          - if project.number_of_columns == 1
-            article.item data-block='1' class='i1x1'
-              a href="/projetos_portifolio/#{project.slug}"
-                .info
-                  span.name = project.name
-                  span.resume = project.detail
-                .img-overlay
-                = image_tag attachment_url(project, :cover_image) if project.cover_image
-          - else
-            article.item data-block='2' class='i1x2'
-              a href="/projetos_portifolio/#{project.slug}"
-                .info
-                  span.name = project.name
-                  span.resume = project.detail
-                .img-overlay
-                = image_tag attachment_url(project, :cover_image) if project.cover_image
+        = render partial: 'photos'
                 

@@ -6,6 +6,11 @@ class PortfolioProjectsController < ApplicationController
 		@portfolio_projects = @portfolio_projects.tag(params[:tag]) if params[:tag].present?
 		@portfolio_projects = @portfolio_projects.client(params[:client]) if params[:client].present?
 		@portfolio_projects = @portfolio_projects.type(params[:type]) if params[:type].present?
+		
+		respond_to do |format|
+			format.html
+			format.js { render layout: false }
+		end
 	end
 
 	def show
