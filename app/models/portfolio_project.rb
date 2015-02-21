@@ -5,6 +5,9 @@ class PortfolioProject < ActiveRecord::Base
   	attachment :cover
   	attachment :cover_image
 
+	acts_as_list
+
+	default_scope { order(:position) }
 	scope :client, -> (client_id) { where client_id: client_id }
 	scope :type, -> (type_id) { where type_id: type_id }
   	scope :tag, -> (tag_id) { joins(:portfolio_project_tags).where('portfolio_project_tags.tag_id = ?', tag_id)}

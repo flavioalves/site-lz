@@ -6,7 +6,11 @@ gem 'pg'
 gem 'slim'
 gem 'unicorn'
 gem 'devise'
+
 gem 'activeadmin', github: 'activeadmin'
+gem 'acts_as_list'
+gem 'activeadmin-sortable'
+
 gem "mini_magick"
 gem "refile", require: ["refile/rails", "refile/image_processing"]
 gem "aws-sdk"

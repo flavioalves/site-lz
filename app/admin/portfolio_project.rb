@@ -4,7 +4,13 @@ ActiveAdmin.register PortfolioProject do
                 :cover_image, :photos_attributes, tag_ids: []
   belongs_to :client, finder: :find_by_slug!
 
+  # Settings for activeadmin-sortable gem
+  config.sort_order = 'position_asc'
+  config.paginate   = false
+  sortable
+
   index do
+    sortable_handle_column #activeadmin-sortable gem
     selectable_column
     id_column
     column :name

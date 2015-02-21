@@ -1,8 +1,14 @@
 ActiveAdmin.register Client do
 	permit_params :name, :brand, :url
 
+	# Settings for activeadmin-sortable gem
+	config.sort_order = 'position_asc'
+	config.paginate   = false
+	sortable
+
 	index do
-	    selectable_column
+		sortable_handle_column #activeadmin-sortable gem
+		selectable_column
 	    id_column
 	    column :name
 	    column :url

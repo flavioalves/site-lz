@@ -2,6 +2,10 @@ class Client < ActiveRecord::Base
 	include FriendlyId
 	friendly_id :name, use: [:slugged]
 
+	acts_as_list
+
+	default_scope { order(:position) }
+
 	attachment :brand
 
 	has_many :users

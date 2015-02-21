@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220232232) do
+ActiveRecord::Schema.define(version: 20150221003033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20150220232232) do
     t.integer  "brand_size"
     t.string   "brand_content_type"
     t.string   "url",                null: false
+    t.integer  "position"
   end
 
   add_index "clients", ["name"], name: "index_clients_on_name", unique: true, using: :btree
@@ -120,6 +121,7 @@ ActiveRecord::Schema.define(version: 20150220232232) do
     t.string   "cover_filename"
     t.integer  "cover_size"
     t.string   "cover_content_type"
+    t.integer  "position"
   end
 
   add_index "portfolio_projects", ["client_id"], name: "index_portfolio_projects_on_client_id", using: :btree
