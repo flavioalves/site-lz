@@ -5,7 +5,7 @@ $(document).ready(function(){
   $(".slider-container").height(height);
 
   var useCaltion = ($(".l-home") && $(".l-home").length > 0) ? false : true;
-
+  
   $(".royalSlider").royalSlider({
       keyboardNavEnabled: true,
       autoScaleSlider: true,
