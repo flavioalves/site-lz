@@ -40,16 +40,28 @@
 
       &.select-categories
         margin-left: 20px
+        
+        @media (min-width: $default) 
+          margin-left: 15px
+
+        @media (min-width: $large-display) 
+          margin-left: 20px
+
 
       &.select-types
         margin-left: 20px
+
+        @media (min-width: $default) 
+          margin-left: 15px
+
+        @media (min-width: $large-display) 
+          margin-left: 20px
 
       &:focus 
         border-color: #2d2d2d
         outline: 0
         box-shadow: none
 
-    
 
 
   .project-info
@@ -89,6 +101,7 @@
 
       span 
         display: block
+        white-space: pre-line
         &.name
           font-weight: bold
 
@@ -138,13 +151,15 @@
       width: 100%
       z-index: 9
       box-shadow: inset 0px -70px 30px -10px rgba(0, 0, 0, 0.4)
-
+      white-space: pre-line
+      
 
       span
         text-transform: uppercase
         color: white
         display: block
-
+        white-space: pre-line
+      
         &.name
           font-weight: bold
           font-size: 18px
