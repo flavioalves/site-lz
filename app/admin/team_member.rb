@@ -2,7 +2,13 @@ ActiveAdmin.register TeamMember do
   permit_params :name, :bio, :linkedin_url, :photo,
                 :photo_id
 
+  # Settings for activeadmin-sortable gem
+  config.sort_order = 'position_asc'
+  config.paginate   = false
+  sortable
+
   index do
+    sortable_handle_column #activeadmin-sortable gem
     selectable_column
     id_column
     column :name
