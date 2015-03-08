@@ -51,9 +51,9 @@
           li.team-member
             .flip-container ontouchstart="this.classList.toggle('hover');"
               .flipper
-                .front
+                .face.front
                   = image_tag(attachment_url(team_member, :photo))
-                .back
+                .face.back
                   .member
                     span.name = team_member.name 
                     p.bio = team_member.bio
