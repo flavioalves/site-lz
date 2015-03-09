@@ -39,9 +39,15 @@
         text-transform: uppercase
 
       .descricao
-        font-size: 16px
-        width: 300px
+        font-size: 16px        
         float: right
+        width: 250px
+
+        @media (min-width: $tablets) 
+          width: 300px
+
+        @media (min-width: $default) 
+          width: 450px
 
 .info-content  
   p 
