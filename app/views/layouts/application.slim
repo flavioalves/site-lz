@@ -7,6 +7,9 @@ doctype html
 /[if IE 8]
   <html class="no-js lt-ie9" lang="#{I18n.locale}">
 
+/[if IE]
+  <style>.slider-container .item .info { margin-top: -290px !important; } </style>
+
 /![if gt IE 8]><!
 html.no-js lang="#{I18n.locale}"
   /! <![endif]
