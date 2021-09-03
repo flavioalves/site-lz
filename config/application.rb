@@ -2,10 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-if defined?(Bundler)
-  Bundler.require(:default, Rails.env)
-end
-
 module SiteLZ
   class Application < Rails::Application
     config.encoding = "utf-8"

@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.4.7'
 
-gem 'rails',                   '4.2'
-gem 'pg'
+gem 'rails', '~> 4.2'
+gem 'pg', '~> 0.15'
 gem 'slim'
 gem 'unicorn'
 gem 'devise'
@@ -28,7 +28,8 @@ gem 'protected_attributes'
 gem 'rails-observers'
 
 # assets
-gem 'sass-rails',     '~> 4.0.0'
+gem 'sass'
+gem 'sass-rails'
 gem 'uglifier',       '>= 1.3.0'
 gem 'font_assets'
 gem 'font-awesome-rails'
