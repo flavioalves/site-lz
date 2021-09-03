@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.4.7'
 
-gem 'rails',                   '4.1.0'
+gem 'rails',                   '4.2'
 gem 'pg'
 gem 'slim'
 gem 'unicorn'
 gem 'devise'
 
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin'
 gem 'acts_as_list'
 gem 'activeadmin-sortable'
 
