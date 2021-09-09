@@ -1,5 +1,6 @@
 development:
   adapter: postgresql
+  encoding: utf8
   database: site_lz_development
   host: localhost
   user: postgres
@@ -10,6 +11,7 @@ development:
 
 test: &test
   adapter: postgresql
+  encoding: utf8
   database: site_lz_test
   host: localhost
   user: postgres
@@ -20,6 +22,7 @@ test: &test
 
 production:
   adapter: postgresql
+  encoding: utf8
   database: site_lz_production
   host: localhost
   user: postgres
