@@ -12,7 +12,8 @@ gem 'acts_as_list'
 gem 'activeadmin-sortable'
 
 gem "mini_magick"
-gem "refile"
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
 gem "aws-sdk"
 gem "cancan"
 
@@ -35,14 +36,11 @@ gem 'font_assets'
 gem 'font-awesome-rails'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
-# compass and plugins
-gem 'compass-rails'
-gem 'compass-normalize'
 gem 'singularitygs'
 gem 'singularity-extras'
 
 gem 'oily_png'
-gem 'color-schemer'
+# gem 'color-schemer'
 gem 'toolkit'
 
 gem "paperclip"

@@ -18,6 +18,18 @@ SiteLZ::Application.configure do
   config.action_mailer.default_url_options = { host: 'localhost:5000' }
   config.assets.prefix = '/assets_dev'
 
+  config.assets.precompile += %w(
+    html5shiv-printshiv.js
+    selectivizr.js
+    active_admin.js
+    active_admin.css
+    active_admin/print.css
+    grid.js
+  )
+
+  # Do not eager load code on boot.
+  config.eager_load = false
+
   Slim::Engine.set_default_options pretty: true
   Slim::Engine.set_default_options format: :html5
 

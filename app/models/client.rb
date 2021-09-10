@@ -6,7 +6,7 @@ class Client < ActiveRecord::Base
 
 	default_scope { order(:position) }
 
-	has_attached_file :brand
+	attachment :brand
 
 	has_many :users
 	has_many :projects
@@ -15,7 +15,7 @@ class Client < ActiveRecord::Base
 	validates :name, presence: true, uniqueness: { case_sensitive: false }
 	validates :url, presence: true, format: { with: URI.regexp }
 	validates_presence_of :slug, :brand
-
+	
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :brand, :brand_id, :url
 
