@@ -1207,14 +1207,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    color-schemer (0.2.8)
-      compass-blend-modes (~> 0.0.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass-blend-modes (0.0.2)
-      compass
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     daemons (1.4.1)
@@ -1557,7 +1553,6 @@ DEPENDENCIES
   binding_of_caller
   bullet
   cancan
-  color-schemer
   devise
   email_spec
   factory_girl_rails
