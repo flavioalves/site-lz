@@ -45,6 +45,7 @@ gem 'oily_png'
 gem 'color-schemer'
 gem 'toolkit'
 
+gem "paperclip"
 
 group :test, :development do
   gem 'rspec-rails'

@@ -1,7 +1,7 @@
 class Photo < ActiveRecord::Base
 	default_scope { order('created_at ASC') }
-	attachment :image
-	
+	has_attached_file :image
+
 	belongs_to :portfolio_project
 
 	validates :image, presence: true

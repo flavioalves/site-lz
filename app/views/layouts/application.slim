@@ -16,19 +16,18 @@ html.no-js.ie-browser lang="#{I18n.locale}"
     == render 'layouts/metatags'
     == render 'layouts/favicons'
 
+    == csrf_meta_tags
     == stylesheet_link_tag 'application', media: 'all'
     /[if lt IE 9]
       == javascript_include_tag 'html5shiv-printshiv'
 
-    /[if IE]      
+    /[if IE]
       scss:
         .l-home .slider-container .item .info {
           margin-top: -280px
         }
-                
-    == csrf_meta_tags
-    
-  body class="#{yield :body_class}" data-development-grid="hide"    
+
+  body class="#{yield :body_class}" data-development-grid="hide"
     section.page
       == render 'layouts/header'
       == yield
