@@ -1,5 +1,5 @@
+
 SiteLZ::Application.configure do
-  Slim::Engine.set_default_options :format => :html
   # Settings specified here will take precedence over those in config/application.rb
 
   config.assets.js_compressor = :uglifier
@@ -13,46 +13,14 @@ SiteLZ::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   # config.serve_static_files = false
-  config.serve_static_files = true
   config.static_cache_control = 'public, max-age=31536000'
 
-  # Compress JavaScripts and CSS
-  config.assets.compress = true
-
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  # config.assets.compile = false
-  config.assets.compile = false
-
-  # Generate digests for assets URLs
-  config.assets.digest = true
-
-  # Do not eager load code on boot.
-  config.eager_load = true
-
-  # Defaults to Rails.root.join("public/assets")
-  # config.assets.manifest = YOUR_PATH
-
-  # Specifies the header that your server uses for sending files
-  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
-
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
-
-  # See everything in the log (default is :info)
   config.log_level = :info
 
-  # Prepend all log lines with the following tags
-  # config.log_tags = [ :subdomain, :uuid ]
-
-  # Use a different logger for distributed setups
-  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-
-  # Use a different cache store in production
-  # config.cache_store = :mem_cache_store
+  config.assets.compress = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = "dluafhj7422d4.cloudfront.net"
+  # config.action_controller.asset_host = "dluafhj7422d4.cloudfront.net"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
@@ -65,6 +33,11 @@ SiteLZ::Application.configure do
     grid.js
   )
 
+  # Do not eager load code on boot.
+  config.eager_load = false
+
+  Slim::Engine.set_default_options pretty: true
+  Slim::Engine.set_default_options format: :html
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
