@@ -2,8 +2,8 @@ class PortfolioProject < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name, use: [:slugged]
 
-	has_attached_file :cover
-  has_attached_file :cover_image
+	attachment :cover
+  attachment :cover_image
 
 	acts_as_list
 
