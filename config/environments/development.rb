@@ -31,7 +31,7 @@ SiteLZ::Application.configure do
   config.eager_load = false
 
   Slim::Engine.set_default_options pretty: true
-  Slim::Engine.set_default_options format: :html5
+  Slim::Engine.set_default_options format: :html
 
   # Automatically inject JavaScript needed for LiveReload
   #config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
