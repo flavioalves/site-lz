@@ -3,8 +3,8 @@ development:
   encoding: utf8
   database: site_lz_development
   host: localhost
-  user: helioadson
-  password: 123456
+  user: postgres
+  password:
   pool: 5
   timeout: 5000
   template: template0
@@ -14,8 +14,8 @@ test: &test
   encoding: utf8
   database: site_lz_test
   host: localhost
-  user: helioadson
-  password: 123456
+  user: postgres
+  password:
   pool: 5
   timeout: 5000
   template: template0
@@ -23,10 +23,10 @@ test: &test
 production:
   adapter: postgresql
   encoding: utf8
-  database: site_lz_development
+  database: site_lz_production
   host: localhost
-  user: helioadson
-  password: 123456
+  user: postgres
+  password:
   pool: 5
   timeout: 5000
   template: template0
