@@ -1,18 +1,20 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.4.7'
 
-gem 'rails',                   '4.1.0'
-gem 'pg'
+gem 'rails', '~> 4.2.5'
+gem 'pg', '~> 0.15'
 gem 'slim'
 gem 'unicorn'
 gem 'devise'
 
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin'
 gem 'acts_as_list'
 gem 'activeadmin-sortable'
 
 gem "mini_magick"
-gem "refile", require: ["refile/rails", "refile/image_processing"]
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+gem "refile-s3"
 gem "aws-sdk"
 gem "cancan"
 
@@ -28,22 +30,21 @@ gem 'protected_attributes'
 gem 'rails-observers'
 
 # assets
-gem 'sass-rails',     '~> 4.0.0'
+gem 'sass'
+gem 'sass-rails'
 gem 'uglifier',       '>= 1.3.0'
 gem 'font_assets'
 gem 'font-awesome-rails'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
-# compass and plugins
-gem 'compass-rails'
-gem 'compass-normalize'
 gem 'singularitygs'
 gem 'singularity-extras'
 
 gem 'oily_png'
-gem 'color-schemer'
+# gem 'color-schemer'
 gem 'toolkit'
 
+gem "paperclip"
 
 group :test, :development do
   gem 'rspec-rails'
@@ -62,13 +63,13 @@ group :development do
   gem 'rails-boilerplate'
   gem 'magic_encoding'
   gem 'html2slim'
-  #gem 'guard-livereload', require: false
-  #gem 'rack-livereload'
-  #gem 'rb-fsevent', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
-  gem 'rack-mini-profiler'  
+  gem 'rack-mini-profiler'
 end
 
 group :production do

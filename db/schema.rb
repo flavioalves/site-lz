@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "active_admin_comments", force: true do |t|
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
     t.text     "body"
     t.string   "resource_id",   null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "admin_users", force: true do |t|
+  create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "clients", force: true do |t|
+  create_table "clients", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "clients", ["name"], name: "index_clients_on_name", unique: true, using: :btree
   add_index "clients", ["slug"], name: "index_clients_on_slug", unique: true, using: :btree
 
-  create_table "covers", force: true do |t|
+  create_table "covers", force: :cascade do |t|
     t.string   "obra",               null: false
     t.string   "description",        null: false
     t.integer  "client_id"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
 
   add_index "covers", ["client_id"], name: "index_covers_on_client_id", using: :btree
 
-  create_table "photos", force: true do |t|
+  create_table "photos", force: :cascade do |t|
     t.string   "image_id"
     t.integer  "portfolio_project_id"
     t.datetime "created_at"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
 
   add_index "photos", ["portfolio_project_id"], name: "index_photos_on_portfolio_project_id", using: :btree
 
-  create_table "portfolio_project_tags", force: true do |t|
+  create_table "portfolio_project_tags", force: :cascade do |t|
     t.integer  "portfolio_project_id"
     t.integer  "tag_id"
     t.datetime "created_at"
@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "portfolio_project_tags", ["portfolio_project_id"], name: "index_portfolio_project_tags_on_portfolio_project_id", using: :btree
   add_index "portfolio_project_tags", ["tag_id"], name: "index_portfolio_project_tags_on_tag_id", using: :btree
 
-  create_table "portfolio_projects", force: true do |t|
+  create_table "portfolio_projects", force: :cascade do |t|
     t.string   "name",                     null: false
     t.string   "detail",                   null: false
     t.string   "place",                    null: false
@@ -128,7 +128,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "portfolio_projects", ["slug"], name: "index_portfolio_projects_on_slug", unique: true, using: :btree
   add_index "portfolio_projects", ["type_id"], name: "index_portfolio_projects_on_type_id", using: :btree
 
-  create_table "project_files", force: true do |t|
+  create_table "project_files", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.integer  "project_id"
@@ -142,7 +142,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
 
   add_index "project_files", ["project_id"], name: "index_project_files_on_project_id", using: :btree
 
-  create_table "projects", force: true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.integer  "client_id"
@@ -154,14 +154,14 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "projects", ["client_id"], name: "index_projects_on_client_id", using: :btree
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true, using: :btree
 
-  create_table "tags", force: true do |t|
+  create_table "tags", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "class_name", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "team_members", force: true do |t|
+  create_table "team_members", force: :cascade do |t|
     t.string   "name",               null: false
     t.string   "bio",                null: false
     t.string   "linkedin_url",       null: false
@@ -174,13 +174,13 @@ ActiveRecord::Schema.define(version: 20150226022942) do
     t.integer  "position"
   end
 
-  create_table "types", force: true do |t|
+  create_table "types", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "user_projects", force: true do |t|
+  create_table "user_projects", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "project_id"
     t.datetime "created_at"
@@ -190,7 +190,7 @@ ActiveRecord::Schema.define(version: 20150226022942) do
   add_index "user_projects", ["project_id"], name: "index_user_projects_on_project_id", using: :btree
   add_index "user_projects", ["user_id"], name: "index_user_projects_on_user_id", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
